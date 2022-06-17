@@ -1,0 +1,2597 @@
+meta {
+  title: "Watch Your Edits";
+  icon: "https://raw.githubusercontent.com/Umakanthsaikumar/teamwise_track_your_edit_paintstyle/76b6fd0f0e2d965676d54d9eb613716009c6ec7b/icon-track-edit.png";
+  description: "Highlights features that were created/modified in your downloaded area";
+  watch-modified: true;
+  version: "3.1";
+  author: RoadMapsYou;
+  contributor: rocky_Rockz;
+}
+
+
+/* NOTES
+
+1.0: Initial version
+1.1: Consolidated code blocks into somethign easier to read, changed some styling settings to be less noisy on the map
+2.0: Removed class structuring to allow for highway classifications to be seen underneath
+3.0: Sectioned out different teams into drop down menus 
+3.1: Updated users since Jan. 2021 group, separated sub-teams, added more descriptive section headers
+
+Table of Contents
+
+1. Settings/Groups
+2. Pre-Upload Styling
+3. Post-Upload Styling
+
+/*-----------------------------------------------------------------*\
+                                                    Settings/Groups
+\*----------------------------------------------------------------------------------------------------------------------*/
+
+/* Create Maintenance Editing Team Braniacs Setting Groups */
+/* ------------------------------------------------------- */
+settings::team_Braniacs {
+    label: tr("01) Team Braniacs[Maint Editing]");
+}
+
+/* User Settings */
+
+setting::user_MountTeide {
+  type: boolean;  
+  label: tr("Turn User MountTeide On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_TeltowCanal {
+  type: boolean;  
+  label: tr("Turn User TeltowCanal On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_TrusoValley {
+  type: boolean;  
+  label: tr("Turn User TrusoValley On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_IsleofSkye9 {
+  type: boolean;  
+  label: tr("Turn User IsleofSkye9 On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_GuyandotteRiver {
+  type: boolean;  
+  label: tr("Turn User GuyandotteRiver On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_LechuguillaDesert {
+  type: boolean;  
+  label: tr("Turn User LechuguillaDesert On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_MercedarioMountain {
+  type: boolean;  
+  label: tr("Turn User MercedarioMountain On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_TeltowCanal {
+  type: boolean;  
+  label: tr("Turn User TeltowCanal On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_ChichesterCanal {
+  type: boolean;  
+  label: tr("Turn User ChichesterCanal On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_Drammenselva {
+  type: boolean;  
+  label: tr("Turn User Drammenselva On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_Haweswater {
+  type: boolean;  
+  label: tr("Turn User Haweswater On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_RussellLake {
+  type: boolean;  
+  label: tr("Turn User RussellLake On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_IshikariPlain {
+  type: boolean;  
+  label: tr("Turn User IshikariPlain On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_HonisterPass {
+  type: boolean;  
+  label: tr("Turn User HonisterPass On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_LakeTanganyika {
+  type: boolean;  
+  label: tr("Turn User LakeTanganyika On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_Ometepe {
+  type: boolean;  
+  label: tr("Turn User Ometepe On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_Makinisland {
+  type: boolean;  
+  label: tr("Turn User Makinisland On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_IjRiver {
+  type: boolean;  
+  label: tr("Turn User IjRiver On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_Omotesando {
+  type: boolean;  
+  label: tr("Turn User Omotesando On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_WardijaRidge {
+  type: boolean;  
+  label: tr("Turn User WardijaRidge On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_NevadaFall {
+  type: boolean;  
+  label: tr("Turn User NevadaFall On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_RockefellerPlateau {
+  type: boolean;  
+  label: tr("Turn User RockefellerPlateau On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_SutroTower {
+  type: boolean;  
+  label: tr("Turn User SutroTower On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_ZugIsland {
+  type: boolean;  
+  label: tr("Turn User ZugIsland On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_RangipoDesert {
+  type: boolean;  
+  label: tr("Turn User RangipoDesert On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_SmokeCreekDesert {
+  type: boolean;  
+  label: tr("Turn User SmokeCreekDesert On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_MountDzhimara {
+  type: boolean;  
+  label: tr("Turn User MountDzhimara On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_Torderariver {
+  type: boolean;  
+  label: tr("Turn User Torderariver On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_MountNyiragongo {
+  type: boolean;  
+  label: tr("Turn User MountNyiragongo On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_RiverCasiquiare {
+  type: boolean;  
+  label: tr("Turn User RiverCasiquiare On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_DanakilDesert {
+  type: boolean;  
+  label: tr("Turn User DanakilDesert On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+setting::user_KulundaSteppe {
+  type: boolean;  
+  label: tr("Turn User KulundaSteppe On/Off");
+  default: false;
+  group: "team_Braniacs";
+}
+
+
+/* Create Maintenance Editing Team Champs Setting Groups */
+/* ----------------------------------------------------------- */
+settings::team_champs {
+    label: tr("02) Team Champs[Maint Editing]");
+}
+
+/* User Settings */
+
+setting::user_Alcatraz05 {
+  type: boolean;  
+  label: tr("Turn User Alcatraz05 On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_JerrawangalaValley {
+  type: boolean;  
+  label: tr("Turn User JerrawangalaValley On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_PoolMalebo {
+  type: boolean;  
+  label: tr("Turn User PoolMalebo On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_WinnipegosisLake {
+  type: boolean;  
+  label: tr("Turn User WinnipegosisLake On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_GribskovForest {
+  type: boolean;  
+  label: tr("Turn User GribskovForest On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_KunduzRiver {
+  type: boolean;  
+  label: tr("Turn User KunduzRiver On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_Grasmere {
+  type: boolean;  
+  label: tr("Turn User Grasmere On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_LittleScarciesRiver {
+  type: boolean;  
+  label: tr("Turn User LittleScarciesRiver On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_ChingfordReservoir {
+  type: boolean;  
+  label: tr("Turn User ChingfordReservoir On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_MontHiuchigatake {
+  type: boolean;  
+  label: tr("Turn User MontHiuchigatake On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_LakeKutcharo {
+  type: boolean;  
+  label: tr("Turn User LakeKutcharo On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_StrzeleckiDesert {
+  type: boolean;  
+  label: tr("Turn User StrzeleckiDesert On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_Ahaggarplateau {
+  type: boolean;  
+  label: tr("Turn User Ahaggarplateau On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_WadiWishkaDam {
+  type: boolean;  
+  label: tr("Turn User WadiWishkaDam On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_BecharofLake {
+  type: boolean;  
+  label: tr("Turn User BecharofLake On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+setting::user_KuskokwimRiver {
+  type: boolean;  
+  label: tr("Turn User KuskokwimRiver On/Off");
+  default: false;
+  group: "team_champs";
+}
+
+/* Create Maintenance Editing Professional Pirates Setting Groups */
+/* ------------------------------------------------------- */
+settings::professional_pirates {
+    label: tr("03) Professional Pirates[Maint Editing]");
+}
+
+/* User Settings */
+
+setting::user_TeltowCanal {
+  type: boolean;  
+  label: tr("Turn User TeltowCanal On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_simonmoon {
+  type: boolean;  
+  label: tr("Turn User simonmoon On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_DolomiteMountainRange {
+  type: boolean;  
+  label: tr("Turn User DolomiteMountainRange On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_FourPeaksMNT {
+  type: boolean;  
+  label: tr("Turn User FourPeaksMNT On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_BransfieldBasin {
+  type: boolean;  
+  label: tr("Turn User BransfieldBasin On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_VardziaRuins {
+  type: boolean;  
+  label: tr("Turn User VardziaRuins On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_Sugarloaf {
+  type: boolean;  
+  label: tr("Turn User Sugarloaf On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_CoursSaleya {
+  type: boolean;  
+  label: tr("Turn User CoursSaleya On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_LoessPlateau {
+  type: boolean;  
+  label: tr("Turn User LoessPlateau On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_GreatArtesianBasin {
+  type: boolean;  
+  label: tr("Turn User GreatArtesianBasin On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_Yoyogipark {
+  type: boolean;  
+  label: tr("Turn User Yoyogipark On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_HunterdonPlateau {
+  type: boolean;  
+  label: tr("Turn User HunterdonPlateau On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_BelleIsle {
+  type: boolean;  
+  label: tr("Turn User BelleIsle On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_HindmarshSquare {
+  type: boolean;  
+  label: tr("Turn User HindmarshSquare On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_MountGozaisho {
+  type: boolean;  
+  label: tr("Turn User MountGozaisho On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_SkelligIslands {
+  type: boolean;  
+  label: tr("Turn User SkelligIslands On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_HungryHorse {
+  type: boolean;  
+  label: tr("Turn User HungryHorse On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_PoconoMountains {
+  type: boolean;  
+  label: tr("Turn User PoconoMountains On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_UpperAngaraRiver {
+  type: boolean;  
+  label: tr("Turn User UpperAngaraRiver On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_WadiElRayanLake {
+  type: boolean;  
+  label: tr("Turn User WadiElRayanLake On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_ThunShipCanal {
+  type: boolean;  
+  label: tr("Turn User ThunShipCanal On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_DanjiangkouDam {
+  type: boolean;  
+  label: tr("Turn User DanjiangkouDam On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_CubangoRiver {
+  type: boolean;  
+  label: tr("Turn User CubangoRiver On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_MountFairweather {
+  type: boolean;  
+  label: tr("Turn User MountFairweather On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_RezovskiCreek {
+  type: boolean;  
+  label: tr("Turn User RezovskiCreek On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_AssiniboineRiver {
+  type: boolean;  
+  label: tr("Turn User AssiniboineRiver On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_BayofZekreet {
+  type: boolean;  
+  label: tr("Turn User BayofZekreet On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_CanalesReservoir {
+  type: boolean;  
+  label: tr("Turn User CanalesReservoir On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_LakeQuilotoa {
+  type: boolean;  
+  label: tr("Turn User LakeQuilotoa On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_Pikespeak {
+  type: boolean;  
+  label: tr("Turn User Pikespeak On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_MountNarodnaya {
+  type: boolean;  
+  label: tr("Turn User MountNarodnaya On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_FortRandallDam {
+  type: boolean;  
+  label: tr("Turn User FortRandallDam On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_YosemiteValley {
+  type: boolean;  
+  label: tr("Turn User YosemiteValley On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_JebelJais {
+  type: boolean;  
+  label: tr("Turn User JebelJais On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_Nolichucky {
+  type: boolean;  
+  label: tr("Turn User Nolichucky On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+setting::user_LoganPass {
+  type: boolean;  
+  label: tr("Turn User LoganPass On/Off");
+  default: false;
+  group: "professional_pirates";
+}
+
+/* Create Maintenance Editing Team Pioneers Setting Groups */
+/* ------------------------------------------------------- */
+settings::team_pioneers {
+    label: tr("04) Team Pioneers[Maint Editing]");
+}
+
+/* User Settings */
+
+setting::user_TebulosmtaMountain {
+  type: boolean;  
+  label: tr("Turn User TebulosmtaMountain On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_JiangjunMNT {
+  type: boolean;  
+  label: tr("Turn User JiangjunMNT On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_GrootLetabaRiver {
+  type: boolean;  
+  label: tr("Turn User GrootLetabaRiver On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_ValleSpluga {
+  type: boolean;  
+  label: tr("Turn User ValleSpluga On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_OuanoukrimMNT {
+  type: boolean;  
+  label: tr("Turn User OuanoukrimMNT On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_LuangwaRiver {
+  type: boolean;  
+  label: tr("Turn User LuangwaRiver On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_FinowRiver {
+  type: boolean;  
+  label: tr("Turn User FinowRiver On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_CapitolHill {
+  type: boolean;  
+  label: tr("Turn User CapitolHill On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_RudenIsland {
+  type: boolean;  
+  label: tr("Turn User RudenIsland On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_OronoBog {
+  type: boolean;  
+  label: tr("Turn User OronoBog On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_JiuzhaigouValley {
+  type: boolean;  
+  label: tr("Turn User JiuzhaigouValley On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_BirminghamPlateau {
+  type: boolean;  
+  label: tr("Turn User BirminghamPlateau On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_ThirlmereReservoir {
+  type: boolean;  
+  label: tr("Turn User ThirlmereReservoir On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_JinshaRiver {
+  type: boolean;  
+  label: tr("Turn User JinshaRiver On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+setting::user_MountWrangell {
+  type: boolean;  
+  label: tr("Turn User MountWrangell On/Off");
+  default: false;
+  group: "team_pioneers";
+}
+
+
+/* Create Maintenance Editing Lightning Legends Setting Groups */
+/* ----------------------------------------------------------- */
+settings::lightning_legends {
+    label: tr("05) Lightning Legends[Maint Editing]");
+}
+
+/* User Settings */
+
+setting::user_UncompahgrePlateau {
+  type: boolean;  
+  label: tr("Turn User UncompahgrePlateau On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_KyzylkumDesert {
+  type: boolean;  
+  label: tr("Turn User KyzylkumDesert On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_MountSneffels {
+  type: boolean;  
+  label: tr("Turn User MountSneffels On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_SalisburyPlain {
+  type: boolean;  
+  label: tr("Turn User SalisburyPlain On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_MinjiangRiver {
+  type: boolean;  
+  label: tr("Turn User MinjiangRiver On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_ManzalaLake {
+  type: boolean;  
+  label: tr("Turn User ManzalaLake On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_CalleNorZaragay {
+  type: boolean;  
+  label: tr("Turn User CalleNorZaragay On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_GamkaskloofValley {
+  type: boolean;  
+  label: tr("Turn User GamkaskloofValley On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_PilcomayoRiver {
+  type: boolean;  
+  label: tr("Turn User PilcomayoRiver On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_PicoDoFogo {
+  type: boolean;  
+  label: tr("Turn User PicoDoFogo On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_LizardHeadPeak {
+  type: boolean;  
+  label: tr("Turn User LizardHeadPeak On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_OlipaIsland {
+  type: boolean;  
+  label: tr("Turn User OlipaIsland On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_MakomanaiRiver {
+  type: boolean;  
+  label: tr("Turn User MakomanaiRiver On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_TaklamakanDesert22 {
+  type: boolean;  
+  label: tr("Turn User TaklamakanDesert22 On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_PontaDoOuro {
+  type: boolean;  
+  label: tr("Turn User PontaDoOuro On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+setting::user_ChapmansPeak {
+  type: boolean;  
+  label: tr("Turn User ChapmansPeak On/Off");
+  default: false;
+  group: "lightning_legends";
+}
+
+
+/* Create Maintenance Editing Team Crusaders Setting Groups */
+/* ------------------------------------------------------- */
+
+settings::team_crusaders {
+    label: tr("06) Team Crusaders[Maint QC]");
+}
+
+/* User Settings */
+
+setting::user_UluruRock {
+  type: boolean;  
+  label: tr("Turn User UluruRock On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_ErzsebetTer {
+  type: boolean;  
+  label: tr("Turn User ErzsebetTer On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Pantanal5 {
+  type: boolean;  
+  label: tr("Turn User Pantanal5 On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_PointeDesAlmadies {
+  type: boolean;  
+  label: tr("Turn User PointeDesAlmadies On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Escambron {
+  type: boolean;  
+  label: tr("Turn User Escambron On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Cloudbreak {
+  type: boolean;
+  label: tr("Turn User Cloudbreak On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Nanticoke {
+  type: boolean;  
+  label: tr("Turn User Nanticoke On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Okavango77 {
+  type: boolean;
+  label: tr("Turn User Okavango77 On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_KazakhSteppe {
+  type: boolean;  
+  label: tr("Turn User KazakhSteppe On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_roanoke_island {
+  type: boolean;
+  label: tr("Turn User roanoke_island On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_BonanzaPeak {
+  type: boolean;
+  label: tr("Turn User BonanzaPeak On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Antiparos {
+  type: boolean;
+  label: tr("Turn User Antiparos On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Skiddaw {
+  type: boolean;
+  label: tr("Turn User Skiddaw On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Fernandina1 {
+  type: boolean;
+  label: tr("Turn User Fernandina1 On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Artibonite {
+  type: boolean;
+  label: tr("Turn User Artibonite On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_LacDeYate {
+  type: boolean;
+  label: tr("Turn User LacDeYate On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_HawRiver {
+  type: boolean;
+  label: tr("Turn User HawRiver On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_BeagleChannel {
+  type: boolean;
+  label: tr("Turn User BeagleChannel On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_GangnamDistrict {
+  type: boolean;
+  label: tr("Turn User GangnamDistrict On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_CowlesBog {
+  type: boolean;
+  label: tr("Turn User CowlesBog On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_ForbiddenCity {
+  type: boolean;
+  label: tr("Turn User ForbiddenCity On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_MavericksBB {
+  type: boolean;
+  label: tr("Turn User MavericksBB On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Samaipata {
+  type: boolean;
+  label: tr("Turn User Samaipata On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Nullarbor {
+  type: boolean;
+  label: tr("Turn User Nullarbor On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Begamon {
+  type: boolean;
+  label: tr("Turn User Begamon On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_PlazaBaquedano {
+  type: boolean;
+  label: tr("Turn User PlazaBaquedano On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_pinky_16 {
+  type: boolean;
+  label: tr("Turn User pinky_16 On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_KwaMakhutha {
+  type: boolean;
+  label: tr("Turn User KwaMakhutha On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_Coolbaugh {
+  type: boolean;
+  label: tr("Turn User Coolbaugh On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_vanern {
+  type: boolean;
+  label: tr("Turn User vanern On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_ZocaloBlanco {
+  type: boolean;
+  label: tr("Turn User ZocaloBlanco On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+setting::user_ApostleIslands {
+  type: boolean;
+  label: tr("Turn User ApostleIslands On/Off");
+  default: false;
+  group: "team_crusaders";
+}
+
+/* Create Maintenance Editing Team Conquerors Setting Groups */
+/* ------------------------------------------------------- */
+
+settings::team_conquerors {
+    label: tr("07) Team Conquerors[Maint QC/OSMX/Meta]");
+}
+
+/* User Settings */
+
+setting::user_MountStanley {
+  type: boolean;
+  label: tr("Turn User MountStanley On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_RossSea {
+  type: boolean;
+  label: tr("Turn User RossSea On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Scioto {
+  type: boolean;
+  label: tr("Turn User Scioto On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_EgholmIsland {
+  type: boolean;
+  label: tr("Turn User EgholmIsland On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_PiazzaDellaSignoria {
+  type: boolean;
+  label: tr("Turn User PiazzaDellaSignoria On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Fjallsjoalven {
+  type: boolean;
+  label: tr("Turn User Fjallsjoalven On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_tony_hny {
+  type: boolean;
+  label: tr("Turn User tony_hny On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Olotele {
+  type: boolean;
+  label: tr("Turn User Olotele On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Kanchenjunga {
+  type: boolean;
+  label: tr("Turn User Kanchenjunga On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_DoloresPark {
+  type: boolean;
+  label: tr("Turn User DoloresPark On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Tchoupitoulas {
+  type: boolean;
+  label: tr("Turn User Tchoupitoulas On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Antelopecliif {
+  type: boolean;
+  label: tr("Turn User Antelopecliif On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_g3reader {
+  type: boolean;
+  label: tr("Turn User g3reader On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_moviebuffAS {
+  type: boolean;
+  label: tr("Turn User moviebuffAS On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Hoyt_Schermerhorn {
+  type: boolean;
+  label: tr("Turn User Hoyt_Schermerhorn On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_SingCountry {
+  type: boolean;
+  label: tr("Turn User SingCountry On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_gymsNmaps {
+  type: boolean;
+  label: tr("Turn User gymsNmaps On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_sky_hi {
+  type: boolean;
+  label: tr("Turn User sky_hi On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_lucky_33 {
+  type: boolean;
+  label: tr("Turn User lucky_33 On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_Tyrifjorden {
+  type: boolean;
+  label: tr("Turn User Tyrifjorden On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+setting::user_GilpinFalls {
+  type: boolean;
+  label: tr("Turn User GilpinFalls On/Off");
+  default: false;
+  group: "team_conquerors";
+}
+
+/* Create Water/AOI Aqua Rangers Setting Groups */
+/* ------------------------------------------------------- */
+settings::aqua_rangers {
+    label: tr("08) Aqua Rangers[Water/AOI]");
+}
+
+/* User Settings */
+
+setting::user_sportyAT {
+  type: boolean;  
+  label: tr("Turn User sportyAT On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Jordaan23 {
+  type: boolean;  
+  label: tr("Turn User Jordaan23 On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Kuskokwim {
+  type: boolean;  
+  label: tr("Turn User Kuskokwim On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_eg_ggts {
+  type: boolean;  
+  label: tr("Turn User eg_ggts On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_PiedmontPark {
+  type: boolean;  
+  label: tr("Turn User PiedmontPark On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Trastevere {
+  type: boolean;  
+  label: tr("Turn User Trastevere On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_ObRiver {
+  type: boolean;  
+  label: tr("Turn User ObRiver On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Chesapeake {
+  type: boolean;  
+  label: tr("Turn User Chesapeake On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_CranaeIsland {
+  type: boolean;  
+  label: tr("Turn User CranaeIsland On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Masherbrum {
+  type: boolean;  
+  label: tr("Turn User Masherbrum On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Jungfrau9 {
+  type: boolean;  
+  label: tr("Turn User Jungfrau9 On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Wynwood {
+  type: boolean;  
+  label: tr("Turn User Wynwood On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_DaleOfAire {
+  type: boolean;  
+  label: tr("Turn User DaleOfAire On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_SozhRiver {
+  type: boolean;  
+  label: tr("Turn User SozhRiver On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Balchug {
+  type: boolean;  
+  label: tr("Turn User Balchug On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_ShawIsland {
+  type: boolean;  
+  label: tr("Turn User ShawIsland On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Plekhanov {
+  type: boolean;  
+  label: tr("Turn User Plekhanov On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_NanMadol {
+  type: boolean;  
+  label: tr("Turn User NanMadol On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Wudang {
+  type: boolean;  
+  label: tr("Turn User Wudang On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_bolalala {
+  type: boolean;  
+  label: tr("Turn User bolalala On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+setting::user_Tusculum {
+  type: boolean;  
+  label: tr("Turn User Tusculum On/Off");
+  default: false;
+  group: "aqua_rangers";
+}
+
+
+/* Create Validation team Setting Groups */
+/* ------------------------------------------------------- */
+settings::validation_team {
+    label: tr("09) Validation Team");
+}
+
+/* User Settings */
+
+setting::user_DelawareWaterGap {
+  type: boolean;  
+  label: tr("Turn User DelawareWaterGap On/Off");
+  default: false;
+  group: "validation_team";
+}
+
+setting::user_Belaya01 {
+  type: boolean;  
+  label: tr("Turn User Belaya01 On/Off");
+  default: false;
+  group: "validation_team";
+}
+
+setting::user_Jaggededge {
+  type: boolean;  
+  label: tr("Turn User Jaggededge On/Off");
+  default: false;
+  group: "validation_team";
+}
+
+/* Create Team Wrappers Setting Groups */
+/* ------------------------------------------------------- */
+settings::team_wrappers {
+    label: tr("10) Team Wrappers");
+}
+
+/* User Settings */
+
+setting::user_LomasDelGuijarro {
+  type: boolean;  
+  label: tr("Turn User LomasDelGuijarro On/Off");
+  default: false;
+  group: "team_wrappers";
+}
+
+setting::user_SBJC {
+  type: boolean;  
+  label: tr("Turn User SBJC On/Off");
+  default: false;
+  group: "team_wrappers";
+}
+
+setting::user_WesternGhats {
+  type: boolean;  
+  label: tr("Turn User WesternGhats On/Off");
+  default: false;
+  group: "team_wrappers";
+}
+
+setting::user_Josefstadt {
+  type: boolean;  
+  label: tr("Turn User Josefstadt On/Off");
+  default: false;
+  group: "team_wrappers";
+}
+
+setting::user_LakeComo {
+  type: boolean;  
+  label: tr("Turn User LakeComo On/Off");
+  default: false;
+  group: "team_wrappers";
+}
+
+
+/* Create leads Setting Groups */
+/* ------------------------------------------------------- */
+
+settings::team_leads {
+    label: tr("11) Leads");
+}
+
+/* User Settings */
+
+setting::user_SpanishPeaks {
+  type: boolean;
+  label: tr("Turn User SpanishPeaks On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_photogswa {
+  type: boolean;
+  label: tr("Turn User photogswa On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_MarcyAve {
+  type: boolean;
+  label: tr("Turn User MarcyAve On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_IshRiver {
+  type: boolean;
+  label: tr("Turn User IshRiver On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_Rimac22 {
+  type: boolean;
+  label: tr("Turn User Rimac22 On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_LaMosquitia {
+  type: boolean;
+  label: tr("Turn User LaMosquitia On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_TeaHorseRoad {
+  type: boolean;
+  label: tr("Turn User TeaHorseRoad On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_LanusOeste {
+  type: boolean;
+  label: tr("Turn User LanusOeste On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_Hallstatt {
+  type: boolean;
+  label: tr("Turn User Hallstatt On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_Takadanobaba {
+  type: boolean;
+  label: tr("Turn User Takadanobaba On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_Kitty_Mars {
+  type: boolean;
+  label: tr("Turn User Kitty_Mars On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+setting::user_varP87 {
+  type: boolean;
+  label: tr("Turn User varP87 On/Off");
+  default: false;
+  group: "team_leads";
+}
+
+
+
+/* All User Setting */
+/*----------------------------------------------------------------------------------------------------------------------*\
+\*----------------------------------------------------------------------------------------------------------------------*/
+
+setting::user_all {
+  type: boolean;
+  label: tr("Turn All Users On/Off");
+  default: false;
+}
+
+/* Pre-Upload Setting */
+
+setting::pre_upload {
+  type: boolean;
+  label: tr("Turn Pre-Upload Styling On/Off");
+  default: true;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------*\
+                                                    Pre-Upload Styling
+\*----------------------------------------------------------------------------------------------------------------------*/
+
+/* Tracking Selectors -- styling of nodes BEFORE they are uploaded */
+
+node:modified[setting("pre_upload")]::preupload
+{
+  z-index: -14;
+  symbol-shape: circle;
+  symbol-size: 16;
+  symbol-stroke-color: blue;
+  symbol-stroke-width: 2;
+  symbol-fill-color: orange;
+  symbol-fill-opacity: .3;
+}
+
+/* Tracking Selectors -- styling of ways and ways that include modified nodes BEFORE they are uploaded */
+
+way:modified[setting("pre_upload")]::preupload,
+node:modified < way[setting("pre_upload")]::preupload
+{
+  z-index: -14;
+  casing-width: 12;
+  casing-color: lime;
+  casing-opacity: 0.65;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*\
+                                                    Post-Upload Styling
+\*----------------------------------------------------------------------------------------------------------------------*/
+
+/* Styling of nodes once they belong to "history"*/
+
+/* For individual user settings */
+
+
+node[eval(JOSM_search("user:Alderney"))][setting("user_Alderney")]::postupload,
+node[eval(JOSM_search("user:UluruRock"))][setting("user_UluruRock")]::postupload,
+node[eval(JOSM_search("user:ErzsebetTer"))][setting("user_ErzsebetTer")]::postupload,
+node[eval(JOSM_search("user:Pantanal5"))][setting("user_Pantanal5")]::postupload,
+node[eval(JOSM_search("user:PointeDesAlmadies"))][setting("user_PointeDesAlmadies")]::postupload,
+node[eval(JOSM_search("user:Escambron"))][setting("user_Escambron")]::postupload,
+node[eval(JOSM_search("user:Cloudbreak"))][setting("user_Cloudbreak")]::postupload,
+node[eval(JOSM_search("user:Nanticoke"))][setting("user_Nanticoke")]::postupload,
+node[eval(JOSM_search("user:Okavango77"))][setting("user_Okavango77")]::postupload,
+node[eval(JOSM_search("user:KazakhSteppe"))][setting("user_KazakhSteppe")]::postupload,
+node[eval(JOSM_search("user:roanoke_island"))][setting("user_roanoke_island")]::postupload,
+node[eval(JOSM_search("user:BonanzaPeak"))][setting("user_BonanzaPeak")]::postupload,
+node[eval(JOSM_search("user:Antiparos"))][setting("user_Antiparos")]::postupload,
+node[eval(JOSM_search("user:Skiddaw"))][setting("user_Skiddaw")]::postupload,
+node[eval(JOSM_search("user:Fernandina1"))][setting("user_Fernandina1")]::postupload,
+node[eval(JOSM_search("user:Artibonite"))][setting("user_Artibonite")]::postupload,
+node[eval(JOSM_search("user:LacDeYate"))][setting("user_LacDeYate")]::postupload,
+node[eval(JOSM_search("user:HawRiver"))][setting("user_HawRiver")]::postupload,
+node[eval(JOSM_search("user:BeagleChannel"))][setting("user_BeagleChannel")]::postupload,
+node[eval(JOSM_search("user:GangnamDistrict"))][setting("user_GangnamDistrict")]::postupload,
+node[eval(JOSM_search("user:CowlesBog"))][setting("user_CowlesBog")]::postupload,
+node[eval(JOSM_search("user:ForbiddenCity"))][setting("user_ForbiddenCity")]::postupload,
+node[eval(JOSM_search("user:MavericksBB"))][setting("user_MavericksBB")]::postupload,
+node[eval(JOSM_search("user:Samaipata"))][setting("user_Samaipata")]::postupload,
+node[eval(JOSM_search("user:Nullarbor"))][setting("user_Nullarbor")]::postupload,
+node[eval(JOSM_search("user:Begamon"))][setting("user_Begamon")]::postupload,
+node[eval(JOSM_search("user:PlazaBaquedano"))][setting("user_PlazaBaquedano")]::postupload,
+node[eval(JOSM_search("user:pinky_16"))][setting("user_pinky_16")]::postupload,
+node[eval(JOSM_search("user:KwaMakhutha"))][setting("user_KwaMakhutha")]::postupload,
+node[eval(JOSM_search("user:Coolbaugh"))][setting("user_Coolbaugh")]::postupload,
+node[eval(JOSM_search("user:vanern"))][setting("user_vanern")]::postupload,
+node[eval(JOSM_search("user:ZocaloBlanco"))][setting("user_ZocaloBlanco")]::postupload,
+node[eval(JOSM_search("user:ApostleIslands"))][setting("user_ApostleIslands")]::postupload,
+node[eval(JOSM_search("user:SpanishPeaks"))][setting("user_SpanishPeaks")]::postupload,
+node[eval(JOSM_search("user:photogswa"))][setting("user_photogswa")]::postupload,
+node[eval(JOSM_search("user:MountStanley"))][setting("user_MountStanley")]::postupload,
+node[eval(JOSM_search("user:RossSea"))][setting("user_RossSea")]::postupload,
+node[eval(JOSM_search("user:Scioto"))][setting("user_Scioto")]::postupload,
+node[eval(JOSM_search("user:EgholmIsland"))][setting("user_EgholmIsland")]::postupload,
+node[eval(JOSM_search("user:PiazzaDellaSignoria"))][setting("user_PiazzaDellaSignoria")]::postupload,
+node[eval(JOSM_search("user:Fjallsjoalven"))][setting("user_Fjallsjoalven")]::postupload,
+node[eval(JOSM_search("user:tony_hny"))][setting("user_tony_hny")]::postupload,
+node[eval(JOSM_search("user:Olotele"))][setting("user_Olotele")]::postupload,
+node[eval(JOSM_search("user:Kanchenjunga"))][setting("user_Kanchenjunga")]::postupload,
+node[eval(JOSM_search("user:DoloresPark"))][setting("user_DoloresPark")]::postupload,
+node[eval(JOSM_search("user:Tchoupitoulas"))][setting("user_Tchoupitoulas")]::postupload,
+node[eval(JOSM_search("user:Antelopecliif"))][setting("user_Antelopecliif")]::postupload,
+node[eval(JOSM_search("user:g3reader"))][setting("user_g3reader")]::postupload,
+node[eval(JOSM_search("user:moviebuffAS"))][setting("user_moviebuffAS")]::postupload,
+node[eval(JOSM_search("user:Hoyt_Schermerhorn"))][setting("user_Hoyt_Schermerhorn")]::postupload,
+node[eval(JOSM_search("user:VesterbrogadeStreet"))][setting("user_VesterbrogadeStreet")]::postupload,
+node[eval(JOSM_search("user:LosseRiver"))][setting("user_LosseRiver")]::postupload,
+node[eval(JOSM_search("user:SeguraRiver"))][setting("user_SeguraRiver")]::postupload,
+node[eval(JOSM_search("user:QinghaiLake"))][setting("user_QinghaiLake")]::postupload,
+node[eval(JOSM_search("user:TuggeranongHill"))][setting("user_TuggeranongHill")]::postupload,
+node[eval(JOSM_search("user:WellenkuppeCliff"))][setting("user_WellenkuppeCliff")]::postupload,
+node[eval(JOSM_search("user:ScheldtRiver"))][setting("user_ScheldtRiver")]::postupload,
+node[eval(JOSM_search("user:MountKitchener"))][setting("user_MountKitchener")]::postupload,
+node[eval(JOSM_search("user:TaklamakanDesert"))][setting("user_TaklamakanDesert")]::postupload,
+node[eval(JOSM_search("user:LaurentianPlateau"))][setting("user_LaurentianPlateau")]::postupload,
+node[eval(JOSM_search("user:HoutribdijkDam"))][setting("user_HoutribdijkDam")]::postupload,
+node[eval(JOSM_search("user:SarygamyshLake"))][setting("user_SarygamyshLake")]::postupload,
+node[eval(JOSM_search("user:PechoraPlain"))][setting("user_PechoraPlain")]::postupload,
+node[eval(JOSM_search("user:ChihuahuanDesert"))][setting("user_ChihuahuanDesert")]::postupload,
+node[eval(JOSM_search("user:ChychykliaRiver"))][setting("user_ChychykliaRiver")]::postupload,
+node[eval(JOSM_search("user:MarcyAve"))][setting("user_MarcyAve")]::postupload,
+node[eval(JOSM_search("user:IshRiver"))][setting("user_IshRiver")]::postupload,
+node[eval(JOSM_search("user:Rimac22"))][setting("user_Rimac22")]::postupload,
+node[eval(JOSM_search("user:TebulosmtaMountain"))][setting("user_TebulosmtaMountain")]::postupload,
+node[eval(JOSM_search("user:JiangjunMNT"))][setting("user_JiangjunMNT")]::postupload,
+node[eval(JOSM_search("user:GrootLetabaRiver"))][setting("user_GrootLetabaRiver")]::postupload,
+node[eval(JOSM_search("user:ValleSpluga"))][setting("user_ValleSpluga")]::postupload,
+node[eval(JOSM_search("user:OuanoukrimMNT"))][setting("user_OuanoukrimMNT")]::postupload,
+node[eval(JOSM_search("user:LuangwaRiver"))][setting("user_LuangwaRiver")]::postupload,
+node[eval(JOSM_search("user:FinowRiver"))][setting("user_FinowRiver")]::postupload,
+node[eval(JOSM_search("user:CapitolHill"))][setting("user_CapitolHill")]::postupload,
+node[eval(JOSM_search("user:RudenIsland"))][setting("user_RudenIsland")]::postupload,
+node[eval(JOSM_search("user:OronoBog"))][setting("user_OronoBog")]::postupload,
+node[eval(JOSM_search("user:JiuzhaigouValley"))][setting("user_JiuzhaigouValley")]::postupload,
+node[eval(JOSM_search("user:BirminghamPlateau"))][setting("user_BirminghamPlateau")]::postupload,
+node[eval(JOSM_search("user:ThirlmereReservoir"))][setting("user_ThirlmereReservoir")]::postupload,
+node[eval(JOSM_search("user:JinshaRiver"))][setting("user_JinshaRiver")]::postupload,
+node[eval(JOSM_search("user:MountWrangell"))][setting("user_MountWrangell")]::postupload,
+node[eval(JOSM_search("user:UncompahgrePlateau"))][setting("user_UncompahgrePlateau")]::postupload,
+node[eval(JOSM_search("user:KyzylkumDesert"))][setting("user_KyzylkumDesert")]::postupload,
+node[eval(JOSM_search("user:MountSneffels"))][setting("user_MountSneffels")]::postupload,
+node[eval(JOSM_search("user:SalisburyPlain"))][setting("user_SalisburyPlain")]::postupload,
+node[eval(JOSM_search("user:MinjiangRiver"))][setting("user_MinjiangRiver")]::postupload,
+node[eval(JOSM_search("user:ManzalaLake"))][setting("user_ManzalaLake")]::postupload,
+node[eval(JOSM_search("user:CalleNorZaragay"))][setting("user_CalleNorZaragay")]::postupload,
+node[eval(JOSM_search("user:GamkaskloofValley"))][setting("user_GamkaskloofValley")]::postupload,
+node[eval(JOSM_search("user:PilcomayoRiver"))][setting("user_PilcomayoRiver")]::postupload,
+node[eval(JOSM_search("user:PicoDoFogo"))][setting("user_PicoDoFogo")]::postupload,
+node[eval(JOSM_search("user:LizardHeadPeak"))][setting("user_LizardHeadPeak")]::postupload,
+node[eval(JOSM_search("user:OlipaIsland"))][setting("user_OlipaIsland")]::postupload,
+node[eval(JOSM_search("user:MakomanaiRiver"))][setting("user_MakomanaiRiver")]::postupload,
+node[eval(JOSM_search("user:PontaDoOuro"))][setting("user_PontaDoOuro")]::postupload,
+node[eval(JOSM_search("user:Alcatraz05"))][setting("user_Alcatraz05")]::postupload,
+node[eval(JOSM_search("user:JerrawangalaValley"))][setting("user_JerrawangalaValley")]::postupload,
+node[eval(JOSM_search("user:PoolMalebo"))][setting("user_PoolMalebo")]::postupload,
+node[eval(JOSM_search("user:WinnipegosisLake"))][setting("user_WinnipegosisLake")]::postupload,
+node[eval(JOSM_search("user:GribskovForest"))][setting("user_GribskovForest")]::postupload,
+node[eval(JOSM_search("user:KunduzRiver"))][setting("user_KunduzRiver")]::postupload,
+node[eval(JOSM_search("user:Grasmere"))][setting("user_Grasmere")]::postupload,
+node[eval(JOSM_search("user:LittleScarciesRiver"))][setting("user_LittleScarciesRiver")]::postupload,
+node[eval(JOSM_search("user:ChingfordReservoir"))][setting("user_ChingfordReservoir")]::postupload,
+node[eval(JOSM_search("user:MontHiuchigatake"))][setting("user_MontHiuchigatake")]::postupload,
+node[eval(JOSM_search("user:LakeKutcharo"))][setting("user_LakeKutcharo")]::postupload,
+node[eval(JOSM_search("user:StrzeleckiDesert"))][setting("user_StrzeleckiDesert")]::postupload,
+node[eval(JOSM_search("user:Ahaggarplateau"))][setting("user_Ahaggarplateau")]::postupload,
+node[eval(JOSM_search("user:WadiWishkaDam"))][setting("user_WadiWishkaDam")]::postupload,
+node[eval(JOSM_search("user:BecharofLake"))][setting("user_BecharofLake")]::postupload,
+node[eval(JOSM_search("user:KuskokwimRiver"))][setting("user_KuskokwimRiver")]::postupload,
+node[eval(JOSM_search("user:LaMosquitia"))][setting("user_LaMosquitia")]::postupload,
+node[eval(JOSM_search("user:SingCountry"))][setting("user_SingCountry")]::postupload,
+node[eval(JOSM_search("user:gymsNmaps"))][setting("user_gymsNmaps")]::postupload,
+node[eval(JOSM_search("user:sky_hi"))][setting("user_sky_hi")]::postupload,
+node[eval(JOSM_search("user:lucky_33"))][setting("user_lucky_33")]::postupload,
+node[eval(JOSM_search("user:Tyrifjorden"))][setting("user_Tyrifjorden")]::postupload,
+node[eval(JOSM_search("user:GilpinFalls"))][setting("user_GilpinFalls")]::postupload,
+node[eval(JOSM_search("user:TeaHorseRoad"))][setting("user_TeaHorseRoad")]::postupload,
+node[eval(JOSM_search("user:TeltowCanal"))][setting("user_TeltowCanal")]::postupload,
+node[eval(JOSM_search("user:simonmoon"))][setting("user_simonmoon")]::postupload,
+node[eval(JOSM_search("user:DolomiteMountainRange"))][setting("user_DolomiteMountainRange")]::postupload,
+node[eval(JOSM_search("user:FourPeaksMNT"))][setting("user_FourPeaksMNT")]::postupload,
+node[eval(JOSM_search("user:BransfieldBasin"))][setting("user_BransfieldBasin")]::postupload,
+node[eval(JOSM_search("user:VardziaRuins"))][setting("user_VardziaRuins")]::postupload,
+node[eval(JOSM_search("user:Sugarloaf"))][setting("user_Sugarloaf")]::postupload,
+node[eval(JOSM_search("user:CoursSaleya"))][setting("user_CoursSaleya")]::postupload,
+node[eval(JOSM_search("user:LoessPlateau"))][setting("user_LoessPlateau")]::postupload,
+node[eval(JOSM_search("user:GreatArtesianBasin"))][setting("user_GreatArtesianBasin")]::postupload,
+node[eval(JOSM_search("user:Yoyogipark"))][setting("user_Yoyogipark")]::postupload,
+node[eval(JOSM_search("user:HunterdonPlateau"))][setting("user_HunterdonPlateau")]::postupload,
+node[eval(JOSM_search("user:BelleIsle"))][setting("user_BelleIsle")]::postupload,
+node[eval(JOSM_search("user:HindmarshSquare"))][setting("user_HindmarshSquare")]::postupload,
+node[eval(JOSM_search("user:MountGozaisho"))][setting("user_MountGozaisho")]::postupload,
+node[eval(JOSM_search("user:SkelligIslands"))][setting("user_SkelligIslands")]::postupload,
+node[eval(JOSM_search("user:HungryHorse"))][setting("user_HungryHorse")]::postupload,
+node[eval(JOSM_search("user:PoconoMountains"))][setting("user_PoconoMountains")]::postupload,
+node[eval(JOSM_search("user:UpperAngaraRiver"))][setting("user_UpperAngaraRiver")]::postupload,
+node[eval(JOSM_search("user:WadiElRayanLake"))][setting("user_WadiElRayanLake")]::postupload,
+node[eval(JOSM_search("user:ThunShipCanal"))][setting("user_ThunShipCanal")]::postupload,
+node[eval(JOSM_search("user:DanjiangkouDam"))][setting("user_DanjiangkouDam")]::postupload,
+node[eval(JOSM_search("user:CubangoRiver"))][setting("user_CubangoRiver")]::postupload,
+node[eval(JOSM_search("user:MountFairweather"))][setting("user_MountFairweather")]::postupload,
+node[eval(JOSM_search("user:RezovskiCreek"))][setting("user_RezovskiCreek")]::postupload,
+node[eval(JOSM_search("user:AssiniboineRiver"))][setting("user_AssiniboineRiver")]::postupload,
+node[eval(JOSM_search("user:BayofZekreet"))][setting("user_BayofZekreet")]::postupload,
+node[eval(JOSM_search("user:CanalesReservoir"))][setting("user_CanalesReservoir")]::postupload,
+node[eval(JOSM_search("user:LakeQuilotoa"))][setting("user_LakeQuilotoa")]::postupload,
+node[eval(JOSM_search("user:Pikespeak"))][setting("user_Pikespeak")]::postupload,
+node[eval(JOSM_search("user:MountNarodnaya"))][setting("user_MountNarodnaya")]::postupload,
+node[eval(JOSM_search("user:FortRandallDam"))][setting("user_FortRandallDam")]::postupload,
+node[eval(JOSM_search("user:YosemiteValley"))][setting("user_YosemiteValley")]::postupload,
+node[eval(JOSM_search("user:JebelJais"))][setting("user_JebelJais")]::postupload,
+node[eval(JOSM_search("user:Nolichucky"))][setting("user_Nolichucky")]::postupload,
+node[eval(JOSM_search("user:LoganPass"))][setting("user_LoganPass")]::postupload,
+node[eval(JOSM_search("user:LanusOeste"))][setting("user_LanusOeste")]::postupload,
+node[eval(JOSM_search("user:Hallstatt"))][setting("user_Hallstatt")]::postupload,
+node[eval(JOSM_search("user:MountTeide"))][setting("user_MountTeide")]::postupload,
+node[eval(JOSM_search("user:TrusoValley"))][setting("user_TrusoValley")]::postupload,
+node[eval(JOSM_search("user:IsleofSkye9"))][setting("user_IsleofSkye9")]::postupload,
+node[eval(JOSM_search("user:GuyandotteRiver"))][setting("user_GuyandotteRiver")]::postupload,
+node[eval(JOSM_search("user:LechuguillaDesert"))][setting("user_LechuguillaDesert")]::postupload,
+node[eval(JOSM_search("user:MercedarioMountain"))][setting("user_MercedarioMountain")]::postupload,
+node[eval(JOSM_search("user:ChichesterCanal"))][setting("user_ChichesterCanal")]::postupload,
+node[eval(JOSM_search("user:Drammenselva"))][setting("user_Drammenselva")]::postupload,
+node[eval(JOSM_search("user:Haweswater"))][setting("user_Haweswater")]::postupload,
+node[eval(JOSM_search("user:RussellLake"))][setting("user_RussellLake")]::postupload,
+node[eval(JOSM_search("user:IshikariPlain"))][setting("user_IshikariPlain")]::postupload,
+node[eval(JOSM_search("user:HonisterPass"))][setting("user_HonisterPass")]::postupload,
+node[eval(JOSM_search("user:LakeTanganyika"))][setting("user_LakeTanganyika")]::postupload,
+node[eval(JOSM_search("user:Ometepe"))][setting("user_Ometepe")]::postupload,
+node[eval(JOSM_search("user:Makinisland"))][setting("user_Makinisland")]::postupload,
+node[eval(JOSM_search("user:IjRiver"))][setting("user_IjRiver")]::postupload,
+node[eval(JOSM_search("user:Omotesando"))][setting("user_Omotesando")]::postupload,
+node[eval(JOSM_search("user:WardijaRidge"))][setting("user_WardijaRidge")]::postupload,
+node[eval(JOSM_search("user:NevadaFall"))][setting("user_NevadaFall")]::postupload,
+node[eval(JOSM_search("user:RockefellerPlateau"))][setting("user_RockefellerPlateau")]::postupload,
+node[eval(JOSM_search("user:SutroTower"))][setting("user_SutroTower")]::postupload,
+node[eval(JOSM_search("user:RangipoDesert"))][setting("user_RangipoDesert")]::postupload,
+node[eval(JOSM_search("user:SmokeCreekDesert"))][setting("user_SmokeCreekDesert")]::postupload,
+node[eval(JOSM_search("user:ZugIsland"))][setting("user_ZugIsland")]::postupload,
+node[eval(JOSM_search("user:MountDzhimara"))][setting("user_MountDzhimara")]::postupload,
+node[eval(JOSM_search("user:Torderariver"))][setting("user_Torderariver")]::postupload,
+node[eval(JOSM_search("user:MountNyiragongo"))][setting("user_MountNyiragongo")]::postupload,
+node[eval(JOSM_search("user:RiverCasiquiare"))][setting("user_RiverCasiquiare")]::postupload,
+node[eval(JOSM_search("user:DanakilDesert"))][setting("user_DanakilDesert")]::postupload,
+node[eval(JOSM_search("user:KulundaSteppe"))][setting("user_KulundaSteppe")]::postupload,
+node[eval(JOSM_search("user:sportyAT"))][setting("user_sportyAT")]::postupload,
+node[eval(JOSM_search("user:Jordaan23"))][setting("user_Jordaan23")]::postupload,
+node[eval(JOSM_search("user:Kuskokwim"))][setting("user_Kuskokwim")]::postupload,
+node[eval(JOSM_search("user:eg_ggts"))][setting("user_eg_ggts")]::postupload,
+node[eval(JOSM_search("user:PiedmontPark"))][setting("user_PiedmontPark")]::postupload,
+node[eval(JOSM_search("user:Trastevere"))][setting("user_Trastevere")]::postupload,
+node[eval(JOSM_search("user:ObRiver"))][setting("user_ObRiver")]::postupload,
+node[eval(JOSM_search("user:Chesapeake"))][setting("user_Chesapeake")]::postupload,
+node[eval(JOSM_search("user:CranaeIsland"))][setting("user_CranaeIsland")]::postupload,
+node[eval(JOSM_search("user:Masherbrum"))][setting("user_Masherbrum")]::postupload,
+node[eval(JOSM_search("user:Jungfrau9"))][setting("user_Jungfrau9")]::postupload,
+node[eval(JOSM_search("user:Wynwood"))][setting("user_Wynwood")]::postupload,
+node[eval(JOSM_search("user:DaleOfAire"))][setting("user_DaleOfAire")]::postupload,
+node[eval(JOSM_search("user:SozhRiver"))][setting("user_SozhRiver")]::postupload,
+node[eval(JOSM_search("user:ShawIsland"))][setting("user_ShawIsland")]::postupload,
+node[eval(JOSM_search("user:Plekhanov"))][setting("user_Plekhanov")]::postupload,
+node[eval(JOSM_search("user:NanMadol"))][setting("user_NanMadol")]::postupload,
+node[eval(JOSM_search("user:Wudang"))][setting("user_Wudang")]::postupload,
+node[eval(JOSM_search("user:bolalala"))][setting("user_bolalala")]::postupload,
+node[eval(JOSM_search("user:Tusculum"))][setting("user_Tusculum")]::postupload,
+node[eval(JOSM_search("user:Takadanobaba"))][setting("user_Takadanobaba")]::postupload,
+node[eval(JOSM_search("user:D Sravan"))][setting("user_D Sravan")]::postupload,
+node[eval(JOSM_search("user:ChapmansPeak"))][setting("user_ChapmansPeak")]::postupload,
+node[eval(JOSM_search("user:DelawareWaterGap"))][setting("user_DelawareWaterGap")]::postupload,
+node[eval(JOSM_search("user:Belaya01"))][setting("user_Belaya01")]::postupload,
+node[eval(JOSM_search("user:Jaggededge"))][setting("user_Jaggededge")]::postupload,
+node[eval(JOSM_search("user:LomasDelGuijarro"))][setting("user_LomasDelGuijarro")]::postupload,
+node[eval(JOSM_search("user:SBJC"))][setting("user_SBJC")]::postupload,
+node[eval(JOSM_search("user:WesternGhats"))][setting("user_WesternGhats")]::postupload,
+node[eval(JOSM_search("user:Josefstadt"))][setting("user_Josefstadt")]::postupload,
+node[eval(JOSM_search("user:LakeComo"))][setting("user_LakeComo")]::postupload,
+node[eval(JOSM_search("user:Kitty_Mars"))][setting("user_Kitty_Mars")]::postupload,
+node[eval(JOSM_search("user:varP87"))][setting("user_varP87")]::postupload,
+
+/* For All Users setting */
+
+
+node[eval(JOSM_search("user:Alderney or user:UluruRock or user:ErzsebetTer or user:Pantanal5 or user:PointeDesAlmadies or user:Escambron or user:Cloudbreak or user:Nanticoke or user:Okavango77 or user:KazakhSteppe or user:roanoke_island or user:BonanzaPeak or user:Antiparos or user:Skiddaw or user:Fernandina1 or user:Artibonite or user:LacDeYate or user:HawRiver or user:BeagleChannel or user:GangnamDistrict or user:CowlesBog or user:ForbiddenCity or user:MavericksBB or user:Samaipata or user:Nullarbor or user:Begamon or user:PlazaBaquedano or user:pinky_16 or user:KwaMakhutha or user:Coolbaugh or user:vanern or user:ZocaloBlanco or user:ApostleIslands or user:SpanishPeaks or user:photogswa or user:MountStanley or user:RossSea or user:Scioto or user:EgholmIsland or user:PiazzaDellaSignoria or user:Fjallsjoalven or user:tony_hny or user:Olotele or user:Kanchenjunga or user:DoloresPark or user:Tchoupitoulas or user:Antelopecliif or user:g3reader or user:moviebuffAS or user:Hoyt_Schermerhorn or user:VesterbrogadeStreet or user:LosseRiver or user:SeguraRiver or user:QinghaiLake or user:TuggeranongHill or user:WellenkuppeCliff or user:ScheldtRiver or user:MountKitchener or user:TaklamakanDesert or user:LaurentianPlateau or user:HoutribdijkDam or user:SarygamyshLake or user:PechoraPlain or user:ChihuahuanDesert or user:ChychykliaRiver or user:MarcyAve or user:IshRiver or user:Rimac22 or user:TebulosmtaMountain or user:JiangjunMNT or user:GrootLetabaRiver or user:ValleSpluga or user:OuanoukrimMNT or user:LuangwaRiver or user:FinowRiver or user:CapitolHill or user:RudenIsland or user:OronoBog or user:JiuzhaigouValley or user:BirminghamPlateau or user:ThirlmereReservoir or user:JinshaRiver or user:MountWrangell or user:UncompahgrePlateau or user:KyzylkumDesert or user:MountSneffels or user:SalisburyPlain or user:MinjiangRiver or user:ManzalaLake or user:CalleNorZaragay or user:GamkaskloofValley or user:PilcomayoRiver or user:PicoDoFogo or user:LizardHeadPeak or user:OlipaIsland or user:MakomanaiRiver or user:PontaDoOuro or user:Alcatraz05 or user:JerrawangalaValley or user:PoolMalebo or user:WinnipegosisLake or user:GribskovForest or user:KunduzRiver or user:Grasmere or user:LittleScarciesRiver or user:ChingfordReservoir or user:MontHiuchigatake or user:LakeKutcharo or user:StrzeleckiDesert or user:Ahaggarplateau or user:WadiWishkaDam or user:BecharofLake or user:KuskokwimRiver or user:LaMosquitia or user:SingCountry or user:gymsNmaps or user:sky_hi or user:lucky_33 or user:Tyrifjorden or user:GilpinFalls or user:TeaHorseRoad or user:TeltowCanal or user:simonmoon or user:DolomiteMountainRange or user:FourPeaksMNT or user:BransfieldBasin or user:VardziaRuins or user:Sugarloaf or user:CoursSaleya or user:LoessPlateau or user:GreatArtesianBasin or user:Yoyogipark or user:HunterdonPlateau or user:BelleIsle or user:HindmarshSquare or user:MountGozaisho or user:SkelligIslands or user:HungryHorse or user:PoconoMountains or user:UpperAngaraRiver or user:WadiElRayanLake or user:ThunShipCanal or user:DanjiangkouDam or user:CubangoRiver or user:MountFairweather or user:RezovskiCreek or user:AssiniboineRiver or user:BayofZekreet or user:CanalesReservoir or user:LakeQuilotoa or user:Pikespeak or user:MountNarodnaya or user:FortRandallDam or user:YosemiteValley or user:JebelJais or user:Nolichucky or user:LoganPass or user:LanusOeste or user:Hallstatt or user:MountTeide or user:TrusoValley or user:IsleofSkye9 or user:GuyandotteRiver or user:LechuguillaDesert or user:MercedarioMountain or user:ChichesterCanal or user:Drammenselva or user:Haweswater or user:RussellLake or user:IshikariPlain or user:HonisterPass or user:LakeTanganyika or user:Ometepe or user:Makinisland or user:IjRiver or user:Omotesando or user:WardijaRidge or user:NevadaFall or user:RockefellerPlateau or user:SutroTower or user:RangipoDesert or user:SmokeCreekDesert or user:ZugIsland or user:MountDzhimara or user:Torderariver or user:MountNyiragongo or user:RiverCasiquiare or user:DanakilDesert or user:KulundaSteppe or user:sportyAT or user:Jordaan23 or user:Kuskokwim or user:eg_ggts or user:PiedmontPark or user:Trastevere or user:ObRiver or user:Chesapeake or user:CranaeIsland or user:Masherbrum or user:Jungfrau9 or user:Wynwood or user:DaleOfAire or user:SozhRiver or user:ShawIsland or user:Plekhanov or user:NanMadol or user:Wudang or user:bolalala or user:Tusculum or user:Takadanobaba or user:D Sravan or user:ChapmansPeak or user:DelawareWaterGap or user:Belaya01 or user:Jaggededge or user:LomasDelGuijarro or user:SBJC or user:WesternGhats or user:Josefstadt or user:LakeComo or user:varP87 or user:Kitty_Mars"))][setting("user_all")]::postupload
+{
+  z-index: -12;
+  symbol-shape: circle;
+  symbol-size: 11;
+  symbol-stroke-color: #ff00ff;
+  symbol-stroke-width: 2;
+  symbol-fill-color: #660033;
+  symbol-fill-opacity: 0.65;  
+}
+
+/* Styling of nodes that are part of modified relations once they belong to "history" */
+
+/* For individual user settings */
+
+relation[eval(JOSM_search("user:Alderney"))] > node[setting("user_Alderney")]::postupload_relations,
+relation[eval(JOSM_search("user:UluruRock"))] > node[setting("user_UluruRock")]::postupload_relations,
+relation[eval(JOSM_search("user:ErzsebetTer"))] > node[setting("user_ErzsebetTer")]::postupload_relations,
+relation[eval(JOSM_search("user:Pantanal5"))] > node[setting("user_Pantanal5")]::postupload_relations,
+relation[eval(JOSM_search("user:PointeDesAlmadies"))] > node[setting("user_PointeDesAlmadies")]::postupload_relations,
+relation[eval(JOSM_search("user:Escambron"))] > node[setting("user_Escambron")]::postupload_relations,
+relation[eval(JOSM_search("user:Cloudbreak"))] > node[setting("user_Cloudbreak")]::postupload_relations,
+relation[eval(JOSM_search("user:Nanticoke"))] > node[setting("user_Nanticoke")]::postupload_relations,
+relation[eval(JOSM_search("user:Okavango77"))] > node[setting("user_Okavango77")]::postupload_relations,
+relation[eval(JOSM_search("user:KazakhSteppe"))] > node[setting("user_KazakhSteppe")]::postupload_relations,
+relation[eval(JOSM_search("user:roanoke_island"))] > node[setting("user_roanoke_island")]::postupload_relations,
+relation[eval(JOSM_search("user:BonanzaPeak"))] > node[setting("user_BonanzaPeak")]::postupload_relations,
+relation[eval(JOSM_search("user:Antiparos"))] > node[setting("user_Antiparos")]::postupload_relations,
+relation[eval(JOSM_search("user:Skiddaw"))] > node[setting("user_Skiddaw")]::postupload_relations,
+relation[eval(JOSM_search("user:Fernandina1"))] > node[setting("user_Fernandina1")]::postupload_relations,
+relation[eval(JOSM_search("user:Artibonite"))] > node[setting("user_Artibonite")]::postupload_relations,
+relation[eval(JOSM_search("user:LacDeYate"))] > node[setting("user_LacDeYate")]::postupload_relations,
+relation[eval(JOSM_search("user:HawRiver"))] > node[setting("user_HawRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:BeagleChannel"))] > node[setting("user_BeagleChannel")]::postupload_relations,
+relation[eval(JOSM_search("user:GangnamDistrict"))] > node[setting("user_GangnamDistrict")]::postupload_relations,
+relation[eval(JOSM_search("user:CowlesBog"))] > node[setting("user_CowlesBog")]::postupload_relations,
+relation[eval(JOSM_search("user:ForbiddenCity"))] > node[setting("user_ForbiddenCity")]::postupload_relations,
+relation[eval(JOSM_search("user:MavericksBB"))] > node[setting("user_MavericksBB")]::postupload_relations,
+relation[eval(JOSM_search("user:Samaipata"))] > node[setting("user_Samaipata")]::postupload_relations,
+relation[eval(JOSM_search("user:Nullarbor"))] > node[setting("user_Nullarbor")]::postupload_relations,
+relation[eval(JOSM_search("user:Begamon"))] > node[setting("user_Begamon")]::postupload_relations,
+relation[eval(JOSM_search("user:PlazaBaquedano"))] > node[setting("user_PlazaBaquedano")]::postupload_relations,
+relation[eval(JOSM_search("user:pinky_16"))] > node[setting("user_pinky_16")]::postupload_relations,
+relation[eval(JOSM_search("user:KwaMakhutha"))] > node[setting("user_KwaMakhutha")]::postupload_relations,
+relation[eval(JOSM_search("user:Coolbaugh"))] > node[setting("user_Coolbaugh")]::postupload_relations,
+relation[eval(JOSM_search("user:vanern"))] > node[setting("user_vanern")]::postupload_relations,
+relation[eval(JOSM_search("user:ZocaloBlanco"))] > node[setting("user_ZocaloBlanco")]::postupload_relations,
+relation[eval(JOSM_search("user:ApostleIslands"))] > node[setting("user_ApostleIslands")]::postupload_relations,
+relation[eval(JOSM_search("user:SpanishPeaks"))] > node[setting("user_SpanishPeaks")]::postupload_relations,
+relation[eval(JOSM_search("user:photogswa"))] > node[setting("user_photogswa")]::postupload_relations,
+relation[eval(JOSM_search("user:MountStanley"))] > node[setting("user_MountStanley")]::postupload_relations,
+relation[eval(JOSM_search("user:RossSea"))] > node[setting("user_RossSea")]::postupload_relations,
+relation[eval(JOSM_search("user:Scioto"))] > node[setting("user_Scioto")]::postupload_relations,
+relation[eval(JOSM_search("user:EgholmIsland"))] > node[setting("user_EgholmIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:PiazzaDellaSignoria"))] > node[setting("user_PiazzaDellaSignoria")]::postupload_relations,
+relation[eval(JOSM_search("user:Fjallsjoalven"))] > node[setting("user_Fjallsjoalven")]::postupload_relations,
+relation[eval(JOSM_search("user:tony_hny"))] > node[setting("user_tony_hny")]::postupload_relations,
+relation[eval(JOSM_search("user:Olotele"))] > node[setting("user_Olotele")]::postupload_relations,
+relation[eval(JOSM_search("user:Kanchenjunga"))] > node[setting("user_Kanchenjunga")]::postupload_relations,
+relation[eval(JOSM_search("user:DoloresPark"))] > node[setting("user_DoloresPark")]::postupload_relations,
+relation[eval(JOSM_search("user:Tchoupitoulas"))] > node[setting("user_Tchoupitoulas")]::postupload_relations,
+relation[eval(JOSM_search("user:Antelopecliif"))] > node[setting("user_Antelopecliif")]::postupload_relations,
+relation[eval(JOSM_search("user:g3reader"))] > node[setting("user_g3reader")]::postupload_relations,
+relation[eval(JOSM_search("user:moviebuffAS"))] > node[setting("user_moviebuffAS")]::postupload_relations,
+relation[eval(JOSM_search("user:Hoyt_Schermerhorn"))] > node[setting("user_Hoyt_Schermerhorn")]::postupload_relations,
+relation[eval(JOSM_search("user:VesterbrogadeStreet"))] > node[setting("user_VesterbrogadeStreet")]::postupload_relations,
+relation[eval(JOSM_search("user:LosseRiver"))] > node[setting("user_LosseRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:SeguraRiver"))] > node[setting("user_SeguraRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:QinghaiLake"))] > node[setting("user_QinghaiLake")]::postupload_relations,
+relation[eval(JOSM_search("user:TuggeranongHill"))] > node[setting("user_TuggeranongHill")]::postupload_relations,
+relation[eval(JOSM_search("user:WellenkuppeCliff"))] > node[setting("user_WellenkuppeCliff")]::postupload_relations,
+relation[eval(JOSM_search("user:ScheldtRiver"))] > node[setting("user_ScheldtRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountKitchener"))] > node[setting("user_MountKitchener")]::postupload_relations,
+relation[eval(JOSM_search("user:TaklamakanDesert"))] > node[setting("user_TaklamakanDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:LaurentianPlateau"))] > node[setting("user_LaurentianPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:HoutribdijkDam"))] > node[setting("user_HoutribdijkDam")]::postupload_relations,
+relation[eval(JOSM_search("user:SarygamyshLake"))] > node[setting("user_SarygamyshLake")]::postupload_relations,
+relation[eval(JOSM_search("user:PechoraPlain"))] > node[setting("user_PechoraPlain")]::postupload_relations,
+relation[eval(JOSM_search("user:ChihuahuanDesert"))] > node[setting("user_ChihuahuanDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:ChychykliaRiver"))] > node[setting("user_ChychykliaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MarcyAve"))] > node[setting("user_MarcyAve")]::postupload_relations,
+relation[eval(JOSM_search("user:IshRiver"))] > node[setting("user_IshRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Rimac22"))] > node[setting("user_Rimac22")]::postupload_relations,
+relation[eval(JOSM_search("user:TebulosmtaMountain"))] > node[setting("user_TebulosmtaMountain")]::postupload_relations,
+relation[eval(JOSM_search("user:JiangjunMNT"))] > node[setting("user_JiangjunMNT")]::postupload_relations,
+relation[eval(JOSM_search("user:GrootLetabaRiver"))] > node[setting("user_GrootLetabaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ValleSpluga"))] > node[setting("user_ValleSpluga")]::postupload_relations,
+relation[eval(JOSM_search("user:OuanoukrimMNT"))] > node[setting("user_OuanoukrimMNT")]::postupload_relations,
+relation[eval(JOSM_search("user:LuangwaRiver"))] > node[setting("user_LuangwaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:FinowRiver"))] > node[setting("user_FinowRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:CapitolHill"))] > node[setting("user_CapitolHill")]::postupload_relations,
+relation[eval(JOSM_search("user:RudenIsland"))] > node[setting("user_RudenIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:OronoBog"))] > node[setting("user_OronoBog")]::postupload_relations,
+relation[eval(JOSM_search("user:JiuzhaigouValley"))] > node[setting("user_JiuzhaigouValley")]::postupload_relations,
+relation[eval(JOSM_search("user:BirminghamPlateau"))] > node[setting("user_BirminghamPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:ThirlmereReservoir"))] > node[setting("user_ThirlmereReservoir")]::postupload_relations,
+relation[eval(JOSM_search("user:JinshaRiver"))] > node[setting("user_JinshaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountWrangell"))] > node[setting("user_MountWrangell")]::postupload_relations,
+relation[eval(JOSM_search("user:UncompahgrePlateau"))] > node[setting("user_UncompahgrePlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:KyzylkumDesert"))] > node[setting("user_KyzylkumDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:MountSneffels"))] > node[setting("user_MountSneffels")]::postupload_relations,
+relation[eval(JOSM_search("user:SalisburyPlain"))] > node[setting("user_SalisburyPlain")]::postupload_relations,
+relation[eval(JOSM_search("user:MinjiangRiver"))] > node[setting("user_MinjiangRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ManzalaLake"))] > node[setting("user_ManzalaLake")]::postupload_relations,
+relation[eval(JOSM_search("user:CalleNorZaragay"))] > node[setting("user_CalleNorZaragay")]::postupload_relations,
+relation[eval(JOSM_search("user:GamkaskloofValley"))] > node[setting("user_GamkaskloofValley")]::postupload_relations,
+relation[eval(JOSM_search("user:PilcomayoRiver"))] > node[setting("user_PilcomayoRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:PicoDoFogo"))] > node[setting("user_PicoDoFogo")]::postupload_relations,
+relation[eval(JOSM_search("user:LizardHeadPeak"))] > node[setting("user_LizardHeadPeak")]::postupload_relations,
+relation[eval(JOSM_search("user:OlipaIsland"))] > node[setting("user_OlipaIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:MakomanaiRiver"))] > node[setting("user_MakomanaiRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:PontaDoOuro"))] > node[setting("user_PontaDoOuro")]::postupload_relations,
+relation[eval(JOSM_search("user:Alcatraz05"))] > node[setting("user_Alcatraz05")]::postupload_relations,
+relation[eval(JOSM_search("user:JerrawangalaValley"))] > node[setting("user_JerrawangalaValley")]::postupload_relations,
+relation[eval(JOSM_search("user:PoolMalebo"))] > node[setting("user_PoolMalebo")]::postupload_relations,
+relation[eval(JOSM_search("user:WinnipegosisLake"))] > node[setting("user_WinnipegosisLake")]::postupload_relations,
+relation[eval(JOSM_search("user:GribskovForest"))] > node[setting("user_GribskovForest")]::postupload_relations,
+relation[eval(JOSM_search("user:KunduzRiver"))] > node[setting("user_KunduzRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Grasmere"))] > node[setting("user_Grasmere")]::postupload_relations,
+relation[eval(JOSM_search("user:LittleScarciesRiver"))] > node[setting("user_LittleScarciesRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ChingfordReservoir"))] > node[setting("user_ChingfordReservoir")]::postupload_relations,
+relation[eval(JOSM_search("user:MontHiuchigatake"))] > node[setting("user_MontHiuchigatake")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeKutcharo"))] > node[setting("user_LakeKutcharo")]::postupload_relations,
+relation[eval(JOSM_search("user:StrzeleckiDesert"))] > node[setting("user_StrzeleckiDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:Ahaggarplateau"))] > node[setting("user_Ahaggarplateau")]::postupload_relations,
+relation[eval(JOSM_search("user:WadiWishkaDam"))] > node[setting("user_WadiWishkaDam")]::postupload_relations,
+relation[eval(JOSM_search("user:BecharofLake"))] > node[setting("user_BecharofLake")]::postupload_relations,
+relation[eval(JOSM_search("user:KuskokwimRiver"))] > node[setting("user_KuskokwimRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:LaMosquitia"))] > node[setting("user_LaMosquitia")]::postupload_relations,
+relation[eval(JOSM_search("user:SingCountry"))] > node[setting("user_SingCountry")]::postupload_relations,
+relation[eval(JOSM_search("user:gymsNmaps"))] > node[setting("user_gymsNmaps")]::postupload_relations,
+relation[eval(JOSM_search("user:sky_hi"))] > node[setting("user_sky_hi")]::postupload_relations,
+relation[eval(JOSM_search("user:lucky_33"))] > node[setting("user_lucky_33")]::postupload_relations,
+relation[eval(JOSM_search("user:Tyrifjorden"))] > node[setting("user_Tyrifjorden")]::postupload_relations,
+relation[eval(JOSM_search("user:GilpinFalls"))] > node[setting("user_GilpinFalls")]::postupload_relations,
+relation[eval(JOSM_search("user:TeaHorseRoad"))] > node[setting("user_TeaHorseRoad")]::postupload_relations,
+relation[eval(JOSM_search("user:TeltowCanal"))] > node[setting("user_TeltowCanal")]::postupload_relations,
+relation[eval(JOSM_search("user:simonmoon"))] > node[setting("user_simonmoon")]::postupload_relations,
+relation[eval(JOSM_search("user:DolomiteMountainRange"))] > node[setting("user_DolomiteMountainRange")]::postupload_relations,
+relation[eval(JOSM_search("user:FourPeaksMNT"))] > node[setting("user_FourPeaksMNT")]::postupload_relations,
+relation[eval(JOSM_search("user:BransfieldBasin"))] > node[setting("user_BransfieldBasin")]::postupload_relations,
+relation[eval(JOSM_search("user:VardziaRuins"))] > node[setting("user_VardziaRuins")]::postupload_relations,
+relation[eval(JOSM_search("user:Sugarloaf"))] > node[setting("user_Sugarloaf")]::postupload_relations,
+relation[eval(JOSM_search("user:CoursSaleya"))] > node[setting("user_CoursSaleya")]::postupload_relations,
+relation[eval(JOSM_search("user:LoessPlateau"))] > node[setting("user_LoessPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:GreatArtesianBasin"))] > node[setting("user_GreatArtesianBasin")]::postupload_relations,
+relation[eval(JOSM_search("user:Yoyogipark"))] > node[setting("user_Yoyogipark")]::postupload_relations,
+relation[eval(JOSM_search("user:HunterdonPlateau"))] > node[setting("user_HunterdonPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:BelleIsle"))] > node[setting("user_BelleIsle")]::postupload_relations,
+relation[eval(JOSM_search("user:HindmarshSquare"))] > node[setting("user_HindmarshSquare")]::postupload_relations,
+relation[eval(JOSM_search("user:MountGozaisho"))] > node[setting("user_MountGozaisho")]::postupload_relations,
+relation[eval(JOSM_search("user:SkelligIslands"))] > node[setting("user_SkelligIslands")]::postupload_relations,
+relation[eval(JOSM_search("user:HungryHorse"))] > node[setting("user_HungryHorse")]::postupload_relations,
+relation[eval(JOSM_search("user:PoconoMountains"))] > node[setting("user_PoconoMountains")]::postupload_relations,
+relation[eval(JOSM_search("user:UpperAngaraRiver"))] > node[setting("user_UpperAngaraRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:WadiElRayanLake"))] > node[setting("user_WadiElRayanLake")]::postupload_relations,
+relation[eval(JOSM_search("user:ThunShipCanal"))] > node[setting("user_ThunShipCanal")]::postupload_relations,
+relation[eval(JOSM_search("user:DanjiangkouDam"))] > node[setting("user_DanjiangkouDam")]::postupload_relations,
+relation[eval(JOSM_search("user:CubangoRiver"))] > node[setting("user_CubangoRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountFairweather"))] > node[setting("user_MountFairweather")]::postupload_relations,
+relation[eval(JOSM_search("user:RezovskiCreek"))] > node[setting("user_RezovskiCreek")]::postupload_relations,
+relation[eval(JOSM_search("user:AssiniboineRiver"))] > node[setting("user_AssiniboineRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:BayofZekreet"))] > node[setting("user_BayofZekreet")]::postupload_relations,
+relation[eval(JOSM_search("user:CanalesReservoir"))] > node[setting("user_CanalesReservoir")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeQuilotoa"))] > node[setting("user_LakeQuilotoa")]::postupload_relations,
+relation[eval(JOSM_search("user:Pikespeak"))] > node[setting("user_Pikespeak")]::postupload_relations,
+relation[eval(JOSM_search("user:MountNarodnaya"))] > node[setting("user_MountNarodnaya")]::postupload_relations,
+relation[eval(JOSM_search("user:FortRandallDam"))] > node[setting("user_FortRandallDam")]::postupload_relations,
+relation[eval(JOSM_search("user:YosemiteValley"))] > node[setting("user_YosemiteValley")]::postupload_relations,
+relation[eval(JOSM_search("user:JebelJais"))] > node[setting("user_JebelJais")]::postupload_relations,
+relation[eval(JOSM_search("user:Nolichucky"))] > node[setting("user_Nolichucky")]::postupload_relations,
+relation[eval(JOSM_search("user:LoganPass"))] > node[setting("user_LoganPass")]::postupload_relations,
+relation[eval(JOSM_search("user:LanusOeste"))] > node[setting("user_LanusOeste")]::postupload_relations,
+relation[eval(JOSM_search("user:Hallstatt"))] > node[setting("user_Hallstatt")]::postupload_relations,
+relation[eval(JOSM_search("user:MountTeide"))] > node[setting("user_MountTeide")]::postupload_relations,
+relation[eval(JOSM_search("user:TrusoValley"))] > node[setting("user_TrusoValley")]::postupload_relations,
+relation[eval(JOSM_search("user:IsleofSkye9"))] > node[setting("user_IsleofSkye9")]::postupload_relations,
+relation[eval(JOSM_search("user:GuyandotteRiver"))] > node[setting("user_GuyandotteRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:LechuguillaDesert"))] > node[setting("user_LechuguillaDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:MercedarioMountain"))] > node[setting("user_MercedarioMountain")]::postupload_relations,
+relation[eval(JOSM_search("user:ChichesterCanal"))] > node[setting("user_ChichesterCanal")]::postupload_relations,
+relation[eval(JOSM_search("user:Drammenselva"))] > node[setting("user_Drammenselva")]::postupload_relations,
+relation[eval(JOSM_search("user:Haweswater"))] > node[setting("user_Haweswater")]::postupload_relations,
+relation[eval(JOSM_search("user:RussellLake"))] > node[setting("user_RussellLake")]::postupload_relations,
+relation[eval(JOSM_search("user:IshikariPlain"))] > node[setting("user_IshikariPlain")]::postupload_relations,
+relation[eval(JOSM_search("user:HonisterPass"))] > node[setting("user_HonisterPass")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeTanganyika"))] > node[setting("user_LakeTanganyika")]::postupload_relations,
+relation[eval(JOSM_search("user:Ometepe"))] > node[setting("user_Ometepe")]::postupload_relations,
+relation[eval(JOSM_search("user:Makinisland"))] > node[setting("user_Makinisland")]::postupload_relations,
+relation[eval(JOSM_search("user:IjRiver"))] > node[setting("user_IjRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Omotesando"))] > node[setting("user_Omotesando")]::postupload_relations,
+relation[eval(JOSM_search("user:WardijaRidge"))] > node[setting("user_WardijaRidge")]::postupload_relations,
+relation[eval(JOSM_search("user:NevadaFall"))] > node[setting("user_NevadaFall")]::postupload_relations,
+relation[eval(JOSM_search("user:RockefellerPlateau"))] > node[setting("user_RockefellerPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:SutroTower"))] > node[setting("user_SutroTower")]::postupload_relations,
+relation[eval(JOSM_search("user:RangipoDesert"))] > node[setting("user_RangipoDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:SmokeCreekDesert"))] > node[setting("user_SmokeCreekDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:ZugIsland"))] > node[setting("user_ZugIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:MountDzhimara"))] > node[setting("user_MountDzhimara")]::postupload_relations,
+relation[eval(JOSM_search("user:Torderariver"))] > node[setting("user_Torderariver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountNyiragongo"))] > node[setting("user_MountNyiragongo")]::postupload_relations,
+relation[eval(JOSM_search("user:RiverCasiquiare"))] > node[setting("user_RiverCasiquiare")]::postupload_relations,
+relation[eval(JOSM_search("user:DanakilDesert"))] > node[setting("user_DanakilDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:KulundaSteppe"))] > node[setting("user_KulundaSteppe")]::postupload_relations,
+relation[eval(JOSM_search("user:sportyAT"))] > node[setting("user_sportyAT")]::postupload_relations,
+relation[eval(JOSM_search("user:Jordaan23"))] > node[setting("user_Jordaan23")]::postupload_relations,
+relation[eval(JOSM_search("user:Kuskokwim"))] > node[setting("user_Kuskokwim")]::postupload_relations,
+relation[eval(JOSM_search("user:eg_ggts"))] > node[setting("user_eg_ggts")]::postupload_relations,
+relation[eval(JOSM_search("user:PiedmontPark"))] > node[setting("user_PiedmontPark")]::postupload_relations,
+relation[eval(JOSM_search("user:Trastevere"))] > node[setting("user_Trastevere")]::postupload_relations,
+relation[eval(JOSM_search("user:ObRiver"))] > node[setting("user_ObRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Chesapeake"))] > node[setting("user_Chesapeake")]::postupload_relations,
+relation[eval(JOSM_search("user:CranaeIsland"))] > node[setting("user_CranaeIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:Masherbrum"))] > node[setting("user_Masherbrum")]::postupload_relations,
+relation[eval(JOSM_search("user:Jungfrau9"))] > node[setting("user_Jungfrau9")]::postupload_relations,
+relation[eval(JOSM_search("user:Wynwood"))] > node[setting("user_Wynwood")]::postupload_relations,
+relation[eval(JOSM_search("user:DaleOfAire"))] > node[setting("user_DaleOfAire")]::postupload_relations,
+relation[eval(JOSM_search("user:SozhRiver"))] > node[setting("user_SozhRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ShawIsland"))] > node[setting("user_ShawIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:Plekhanov"))] > node[setting("user_Plekhanov")]::postupload_relations,
+relation[eval(JOSM_search("user:NanMadol"))] > node[setting("user_NanMadol")]::postupload_relations,
+relation[eval(JOSM_search("user:Wudang"))] > node[setting("user_Wudang")]::postupload_relations,
+relation[eval(JOSM_search("user:bolalala"))] > node[setting("user_bolalala")]::postupload_relations,
+relation[eval(JOSM_search("user:Tusculum"))] > node[setting("user_Tusculum")]::postupload_relations,
+relation[eval(JOSM_search("user:Takadanobaba"))] > node[setting("user_Takadanobaba")]::postupload_relations,
+relation[eval(JOSM_search("user:D Sravan"))] > node[setting("user_D Sravan")]::postupload_relations,
+relation[eval(JOSM_search("user:ChapmansPeak"))] > node[setting("user_ChapmansPeak")]::postupload_relations,
+relation[eval(JOSM_search("user:DelawareWaterGap"))] > node[setting("user_DelawareWaterGap")]::postupload_relations,
+relation[eval(JOSM_search("user:Belaya01"))] > node[setting("user_Belaya01")]::postupload_relations,
+relation[eval(JOSM_search("user:Jaggededge"))] > node[setting("user_Jaggededge")]::postupload_relations,
+relation[eval(JOSM_search("user:LomasDelGuijarro"))] > node[setting("user_LomasDelGuijarro")]::postupload_relations,
+relation[eval(JOSM_search("user:SBJC"))] > node[setting("user_SBJC")]::postupload_relations,
+relation[eval(JOSM_search("user:WesternGhats"))] > node[setting("user_WesternGhats")]::postupload_relations,
+relation[eval(JOSM_search("user:Josefstadt"))] > node[setting("user_Josefstadt")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeComo"))] > node[setting("user_LakeComo")]::postupload_relations,
+relation[eval(JOSM_search("user:varP87"))] > node[setting("user_varP87")]::postupload_relations,
+relation[eval(JOSM_search("user:Kitty_Mars"))] > node[setting("user_Kitty_Mars")]::postupload_relations,
+
+
+/* For All Users setting */
+
+relation[eval(JOSM_search("user:Alderney or user:UluruRock or user:ErzsebetTer or user:Pantanal5 or user:PointeDesAlmadies or user:Escambron or user:Cloudbreak or user:Nanticoke or user:Okavango77 or user:KazakhSteppe or user:roanoke_island or user:BonanzaPeak or user:Antiparos or user:Skiddaw or user:Fernandina1 or user:Artibonite or user:LacDeYate or user:HawRiver or user:BeagleChannel or user:GangnamDistrict or user:CowlesBog or user:ForbiddenCity or user:MavericksBB or user:Samaipata or user:Nullarbor or user:Begamon or user:PlazaBaquedano or user:pinky_16 or user:KwaMakhutha or user:Coolbaugh or user:vanern or user:ZocaloBlanco or user:ApostleIslands or user:SpanishPeaks or user:photogswa or user:MountStanley or user:RossSea or user:Scioto or user:EgholmIsland or user:PiazzaDellaSignoria or user:Fjallsjoalven or user:tony_hny or user:Olotele or user:Kanchenjunga or user:DoloresPark or user:Tchoupitoulas or user:Antelopecliif or user:g3reader or user:moviebuffAS or user:Hoyt_Schermerhorn or user:VesterbrogadeStreet or user:LosseRiver or user:SeguraRiver or user:QinghaiLake or user:TuggeranongHill or user:WellenkuppeCliff or user:ScheldtRiver or user:MountKitchener or user:TaklamakanDesert or user:LaurentianPlateau or user:HoutribdijkDam or user:SarygamyshLake or user:PechoraPlain or user:ChihuahuanDesert or user:ChychykliaRiver or user:MarcyAve or user:IshRiver or user:Rimac22 or user:TebulosmtaMountain or user:JiangjunMNT or user:GrootLetabaRiver or user:ValleSpluga or user:OuanoukrimMNT or user:LuangwaRiver or user:FinowRiver or user:CapitolHill or user:RudenIsland or user:OronoBog or user:JiuzhaigouValley or user:BirminghamPlateau or user:ThirlmereReservoir or user:JinshaRiver or user:MountWrangell or user:UncompahgrePlateau or user:KyzylkumDesert or user:MountSneffels or user:SalisburyPlain or user:MinjiangRiver or user:ManzalaLake or user:CalleNorZaragay or user:GamkaskloofValley or user:PilcomayoRiver or user:PicoDoFogo or user:LizardHeadPeak or user:OlipaIsland or user:MakomanaiRiver or user:PontaDoOuro or user:Alcatraz05 or user:JerrawangalaValley or user:PoolMalebo or user:WinnipegosisLake or user:GribskovForest or user:KunduzRiver or user:Grasmere or user:LittleScarciesRiver or user:ChingfordReservoir or user:MontHiuchigatake or user:LakeKutcharo or user:StrzeleckiDesert or user:Ahaggarplateau or user:WadiWishkaDam or user:BecharofLake or user:KuskokwimRiver or user:LaMosquitia or user:SingCountry or user:gymsNmaps or user:sky_hi or user:lucky_33 or user:Tyrifjorden or user:GilpinFalls or user:TeaHorseRoad or user:TeltowCanal or user:simonmoon or user:DolomiteMountainRange or user:FourPeaksMNT or user:BransfieldBasin or user:VardziaRuins or user:Sugarloaf or user:CoursSaleya or user:LoessPlateau or user:GreatArtesianBasin or user:Yoyogipark or user:HunterdonPlateau or user:BelleIsle or user:HindmarshSquare or user:MountGozaisho or user:SkelligIslands or user:HungryHorse or user:PoconoMountains or user:UpperAngaraRiver or user:WadiElRayanLake or user:ThunShipCanal or user:DanjiangkouDam or user:CubangoRiver or user:MountFairweather or user:RezovskiCreek or user:AssiniboineRiver or user:BayofZekreet or user:CanalesReservoir or user:LakeQuilotoa or user:Pikespeak or user:MountNarodnaya or user:FortRandallDam or user:YosemiteValley or user:JebelJais or user:Nolichucky or user:LoganPass or user:LanusOeste or user:Hallstatt or user:MountTeide or user:TrusoValley or user:IsleofSkye9 or user:GuyandotteRiver or user:LechuguillaDesert or user:MercedarioMountain or user:ChichesterCanal or user:Drammenselva or user:Haweswater or user:RussellLake or user:IshikariPlain or user:HonisterPass or user:LakeTanganyika or user:Ometepe or user:Makinisland or user:IjRiver or user:Omotesando or user:WardijaRidge or user:NevadaFall or user:RockefellerPlateau or user:SutroTower or user:RangipoDesert or user:SmokeCreekDesert or user:ZugIsland or user:MountDzhimara or user:Torderariver or user:MountNyiragongo or user:RiverCasiquiare or user:DanakilDesert or user:KulundaSteppe or user:sportyAT or user:Jordaan23 or user:Kuskokwim or user:eg_ggts or user:PiedmontPark or user:Trastevere or user:ObRiver or user:Chesapeake or user:CranaeIsland or user:Masherbrum or user:Jungfrau9 or user:Wynwood or user:DaleOfAire or user:SozhRiver or user:ShawIsland or user:Plekhanov or user:NanMadol or user:Wudang or user:bolalala or user:Tusculum or user:Takadanobaba or user:D Sravan or user:ChapmansPeak or user:DelawareWaterGap or user:Belaya01 or user:Jaggededge or user:LomasDelGuijarro or user:SBJC or user:WesternGhats or user:Josefstadt or user:LakeComo or user:varP87 or user:Kitty_Mars"))] > node[setting("user_all")]::postupload_relations
+{
+  z-index: -10;
+  symbol-shape: circle;
+  symbol-size: 20;
+  symbol-stroke-color: #33ccff;
+  symbol-stroke-width: 2;
+  symbol-fill-opacity: 0.65;  
+}
+
+
+/* Styling of ways once they belong to "history"*/
+
+/* For individual user settings */
+
+way[eval(JOSM_search("user:Alderney"))][setting("user_Alderney")]::postupload,
+way[eval(JOSM_search("user:UluruRock"))][setting("user_UluruRock")]::postupload,
+way[eval(JOSM_search("user:ErzsebetTer"))][setting("user_ErzsebetTer")]::postupload,
+way[eval(JOSM_search("user:Pantanal5"))][setting("user_Pantanal5")]::postupload,
+way[eval(JOSM_search("user:PointeDesAlmadies"))][setting("user_PointeDesAlmadies")]::postupload,
+way[eval(JOSM_search("user:Escambron"))][setting("user_Escambron")]::postupload,
+way[eval(JOSM_search("user:Cloudbreak"))][setting("user_Cloudbreak")]::postupload,
+way[eval(JOSM_search("user:Nanticoke"))][setting("user_Nanticoke")]::postupload,
+way[eval(JOSM_search("user:Okavango77"))][setting("user_Okavango77")]::postupload,
+way[eval(JOSM_search("user:KazakhSteppe"))][setting("user_KazakhSteppe")]::postupload,
+way[eval(JOSM_search("user:roanoke_island"))][setting("user_roanoke_island")]::postupload,
+way[eval(JOSM_search("user:BonanzaPeak"))][setting("user_BonanzaPeak")]::postupload,
+way[eval(JOSM_search("user:Antiparos"))][setting("user_Antiparos")]::postupload,
+way[eval(JOSM_search("user:Skiddaw"))][setting("user_Skiddaw")]::postupload,
+way[eval(JOSM_search("user:Fernandina1"))][setting("user_Fernandina1")]::postupload,
+way[eval(JOSM_search("user:Artibonite"))][setting("user_Artibonite")]::postupload,
+way[eval(JOSM_search("user:LacDeYate"))][setting("user_LacDeYate")]::postupload,
+way[eval(JOSM_search("user:HawRiver"))][setting("user_HawRiver")]::postupload,
+way[eval(JOSM_search("user:BeagleChannel"))][setting("user_BeagleChannel")]::postupload,
+way[eval(JOSM_search("user:GangnamDistrict"))][setting("user_GangnamDistrict")]::postupload,
+way[eval(JOSM_search("user:CowlesBog"))][setting("user_CowlesBog")]::postupload,
+way[eval(JOSM_search("user:ForbiddenCity"))][setting("user_ForbiddenCity")]::postupload,
+way[eval(JOSM_search("user:MavericksBB"))][setting("user_MavericksBB")]::postupload,
+way[eval(JOSM_search("user:Samaipata"))][setting("user_Samaipata")]::postupload,
+way[eval(JOSM_search("user:Nullarbor"))][setting("user_Nullarbor")]::postupload,
+way[eval(JOSM_search("user:Begamon"))][setting("user_Begamon")]::postupload,
+way[eval(JOSM_search("user:PlazaBaquedano"))][setting("user_PlazaBaquedano")]::postupload,
+way[eval(JOSM_search("user:pinky_16"))][setting("user_pinky_16")]::postupload,
+way[eval(JOSM_search("user:KwaMakhutha"))][setting("user_KwaMakhutha")]::postupload,
+way[eval(JOSM_search("user:Coolbaugh"))][setting("user_Coolbaugh")]::postupload,
+way[eval(JOSM_search("user:vanern"))][setting("user_vanern")]::postupload,
+way[eval(JOSM_search("user:ZocaloBlanco"))][setting("user_ZocaloBlanco")]::postupload,
+way[eval(JOSM_search("user:ApostleIslands"))][setting("user_ApostleIslands")]::postupload,
+way[eval(JOSM_search("user:SpanishPeaks"))][setting("user_SpanishPeaks")]::postupload,
+way[eval(JOSM_search("user:photogswa"))][setting("user_photogswa")]::postupload,
+way[eval(JOSM_search("user:MountStanley"))][setting("user_MountStanley")]::postupload,
+way[eval(JOSM_search("user:RossSea"))][setting("user_RossSea")]::postupload,
+way[eval(JOSM_search("user:Scioto"))][setting("user_Scioto")]::postupload,
+way[eval(JOSM_search("user:EgholmIsland"))][setting("user_EgholmIsland")]::postupload,
+way[eval(JOSM_search("user:PiazzaDellaSignoria"))][setting("user_PiazzaDellaSignoria")]::postupload,
+way[eval(JOSM_search("user:Fjallsjoalven"))][setting("user_Fjallsjoalven")]::postupload,
+way[eval(JOSM_search("user:tony_hny"))][setting("user_tony_hny")]::postupload,
+way[eval(JOSM_search("user:Olotele"))][setting("user_Olotele")]::postupload,
+way[eval(JOSM_search("user:Kanchenjunga"))][setting("user_Kanchenjunga")]::postupload,
+way[eval(JOSM_search("user:DoloresPark"))][setting("user_DoloresPark")]::postupload,
+way[eval(JOSM_search("user:Tchoupitoulas"))][setting("user_Tchoupitoulas")]::postupload,
+way[eval(JOSM_search("user:Antelopecliif"))][setting("user_Antelopecliif")]::postupload,
+way[eval(JOSM_search("user:g3reader"))][setting("user_g3reader")]::postupload,
+way[eval(JOSM_search("user:moviebuffAS"))][setting("user_moviebuffAS")]::postupload,
+way[eval(JOSM_search("user:Hoyt_Schermerhorn"))][setting("user_Hoyt_Schermerhorn")]::postupload,
+way[eval(JOSM_search("user:VesterbrogadeStreet"))][setting("user_VesterbrogadeStreet")]::postupload,
+way[eval(JOSM_search("user:LosseRiver"))][setting("user_LosseRiver")]::postupload,
+way[eval(JOSM_search("user:SeguraRiver"))][setting("user_SeguraRiver")]::postupload,
+way[eval(JOSM_search("user:QinghaiLake"))][setting("user_QinghaiLake")]::postupload,
+way[eval(JOSM_search("user:TuggeranongHill"))][setting("user_TuggeranongHill")]::postupload,
+way[eval(JOSM_search("user:WellenkuppeCliff"))][setting("user_WellenkuppeCliff")]::postupload,
+way[eval(JOSM_search("user:ScheldtRiver"))][setting("user_ScheldtRiver")]::postupload,
+way[eval(JOSM_search("user:MountKitchener"))][setting("user_MountKitchener")]::postupload,
+way[eval(JOSM_search("user:TaklamakanDesert"))][setting("user_TaklamakanDesert")]::postupload,
+way[eval(JOSM_search("user:LaurentianPlateau"))][setting("user_LaurentianPlateau")]::postupload,
+way[eval(JOSM_search("user:HoutribdijkDam"))][setting("user_HoutribdijkDam")]::postupload,
+way[eval(JOSM_search("user:SarygamyshLake"))][setting("user_SarygamyshLake")]::postupload,
+way[eval(JOSM_search("user:PechoraPlain"))][setting("user_PechoraPlain")]::postupload,
+way[eval(JOSM_search("user:ChihuahuanDesert"))][setting("user_ChihuahuanDesert")]::postupload,
+way[eval(JOSM_search("user:ChychykliaRiver"))][setting("user_ChychykliaRiver")]::postupload,
+way[eval(JOSM_search("user:MarcyAve"))][setting("user_MarcyAve")]::postupload,
+way[eval(JOSM_search("user:IshRiver"))][setting("user_IshRiver")]::postupload,
+way[eval(JOSM_search("user:Rimac22"))][setting("user_Rimac22")]::postupload,
+way[eval(JOSM_search("user:TebulosmtaMountain"))][setting("user_TebulosmtaMountain")]::postupload,
+way[eval(JOSM_search("user:JiangjunMNT"))][setting("user_JiangjunMNT")]::postupload,
+way[eval(JOSM_search("user:GrootLetabaRiver"))][setting("user_GrootLetabaRiver")]::postupload,
+way[eval(JOSM_search("user:ValleSpluga"))][setting("user_ValleSpluga")]::postupload,
+way[eval(JOSM_search("user:OuanoukrimMNT"))][setting("user_OuanoukrimMNT")]::postupload,
+way[eval(JOSM_search("user:LuangwaRiver"))][setting("user_LuangwaRiver")]::postupload,
+way[eval(JOSM_search("user:FinowRiver"))][setting("user_FinowRiver")]::postupload,
+way[eval(JOSM_search("user:CapitolHill"))][setting("user_CapitolHill")]::postupload,
+way[eval(JOSM_search("user:RudenIsland"))][setting("user_RudenIsland")]::postupload,
+way[eval(JOSM_search("user:OronoBog"))][setting("user_OronoBog")]::postupload,
+way[eval(JOSM_search("user:JiuzhaigouValley"))][setting("user_JiuzhaigouValley")]::postupload,
+way[eval(JOSM_search("user:BirminghamPlateau"))][setting("user_BirminghamPlateau")]::postupload,
+way[eval(JOSM_search("user:ThirlmereReservoir"))][setting("user_ThirlmereReservoir")]::postupload,
+way[eval(JOSM_search("user:JinshaRiver"))][setting("user_JinshaRiver")]::postupload,
+way[eval(JOSM_search("user:MountWrangell"))][setting("user_MountWrangell")]::postupload,
+way[eval(JOSM_search("user:UncompahgrePlateau"))][setting("user_UncompahgrePlateau")]::postupload,
+way[eval(JOSM_search("user:KyzylkumDesert"))][setting("user_KyzylkumDesert")]::postupload,
+way[eval(JOSM_search("user:MountSneffels"))][setting("user_MountSneffels")]::postupload,
+way[eval(JOSM_search("user:SalisburyPlain"))][setting("user_SalisburyPlain")]::postupload,
+way[eval(JOSM_search("user:MinjiangRiver"))][setting("user_MinjiangRiver")]::postupload,
+way[eval(JOSM_search("user:ManzalaLake"))][setting("user_ManzalaLake")]::postupload,
+way[eval(JOSM_search("user:CalleNorZaragay"))][setting("user_CalleNorZaragay")]::postupload,
+way[eval(JOSM_search("user:GamkaskloofValley"))][setting("user_GamkaskloofValley")]::postupload,
+way[eval(JOSM_search("user:PilcomayoRiver"))][setting("user_PilcomayoRiver")]::postupload,
+way[eval(JOSM_search("user:PicoDoFogo"))][setting("user_PicoDoFogo")]::postupload,
+way[eval(JOSM_search("user:LizardHeadPeak"))][setting("user_LizardHeadPeak")]::postupload,
+way[eval(JOSM_search("user:OlipaIsland"))][setting("user_OlipaIsland")]::postupload,
+way[eval(JOSM_search("user:MakomanaiRiver"))][setting("user_MakomanaiRiver")]::postupload,
+way[eval(JOSM_search("user:PontaDoOuro"))][setting("user_PontaDoOuro")]::postupload,
+way[eval(JOSM_search("user:Alcatraz05"))][setting("user_Alcatraz05")]::postupload,
+way[eval(JOSM_search("user:JerrawangalaValley"))][setting("user_JerrawangalaValley")]::postupload,
+way[eval(JOSM_search("user:PoolMalebo"))][setting("user_PoolMalebo")]::postupload,
+way[eval(JOSM_search("user:WinnipegosisLake"))][setting("user_WinnipegosisLake")]::postupload,
+way[eval(JOSM_search("user:GribskovForest"))][setting("user_GribskovForest")]::postupload,
+way[eval(JOSM_search("user:KunduzRiver"))][setting("user_KunduzRiver")]::postupload,
+way[eval(JOSM_search("user:Grasmere"))][setting("user_Grasmere")]::postupload,
+way[eval(JOSM_search("user:LittleScarciesRiver"))][setting("user_LittleScarciesRiver")]::postupload,
+way[eval(JOSM_search("user:ChingfordReservoir"))][setting("user_ChingfordReservoir")]::postupload,
+way[eval(JOSM_search("user:MontHiuchigatake"))][setting("user_MontHiuchigatake")]::postupload,
+way[eval(JOSM_search("user:LakeKutcharo"))][setting("user_LakeKutcharo")]::postupload,
+way[eval(JOSM_search("user:StrzeleckiDesert"))][setting("user_StrzeleckiDesert")]::postupload,
+way[eval(JOSM_search("user:Ahaggarplateau"))][setting("user_Ahaggarplateau")]::postupload,
+way[eval(JOSM_search("user:WadiWishkaDam"))][setting("user_WadiWishkaDam")]::postupload,
+way[eval(JOSM_search("user:BecharofLake"))][setting("user_BecharofLake")]::postupload,
+way[eval(JOSM_search("user:KuskokwimRiver"))][setting("user_KuskokwimRiver")]::postupload,
+way[eval(JOSM_search("user:LaMosquitia"))][setting("user_LaMosquitia")]::postupload,
+way[eval(JOSM_search("user:SingCountry"))][setting("user_SingCountry")]::postupload,
+way[eval(JOSM_search("user:gymsNmaps"))][setting("user_gymsNmaps")]::postupload,
+way[eval(JOSM_search("user:sky_hi"))][setting("user_sky_hi")]::postupload,
+way[eval(JOSM_search("user:lucky_33"))][setting("user_lucky_33")]::postupload,
+way[eval(JOSM_search("user:Tyrifjorden"))][setting("user_Tyrifjorden")]::postupload,
+way[eval(JOSM_search("user:GilpinFalls"))][setting("user_GilpinFalls")]::postupload,
+way[eval(JOSM_search("user:TeaHorseRoad"))][setting("user_TeaHorseRoad")]::postupload,
+way[eval(JOSM_search("user:TeltowCanal"))][setting("user_TeltowCanal")]::postupload,
+way[eval(JOSM_search("user:simonmoon"))][setting("user_simonmoon")]::postupload,
+way[eval(JOSM_search("user:DolomiteMountainRange"))][setting("user_DolomiteMountainRange")]::postupload,
+way[eval(JOSM_search("user:FourPeaksMNT"))][setting("user_FourPeaksMNT")]::postupload,
+way[eval(JOSM_search("user:BransfieldBasin"))][setting("user_BransfieldBasin")]::postupload,
+way[eval(JOSM_search("user:VardziaRuins"))][setting("user_VardziaRuins")]::postupload,
+way[eval(JOSM_search("user:Sugarloaf"))][setting("user_Sugarloaf")]::postupload,
+way[eval(JOSM_search("user:CoursSaleya"))][setting("user_CoursSaleya")]::postupload,
+way[eval(JOSM_search("user:LoessPlateau"))][setting("user_LoessPlateau")]::postupload,
+way[eval(JOSM_search("user:GreatArtesianBasin"))][setting("user_GreatArtesianBasin")]::postupload,
+way[eval(JOSM_search("user:Yoyogipark"))][setting("user_Yoyogipark")]::postupload,
+way[eval(JOSM_search("user:HunterdonPlateau"))][setting("user_HunterdonPlateau")]::postupload,
+way[eval(JOSM_search("user:BelleIsle"))][setting("user_BelleIsle")]::postupload,
+way[eval(JOSM_search("user:HindmarshSquare"))][setting("user_HindmarshSquare")]::postupload,
+way[eval(JOSM_search("user:MountGozaisho"))][setting("user_MountGozaisho")]::postupload,
+way[eval(JOSM_search("user:SkelligIslands"))][setting("user_SkelligIslands")]::postupload,
+way[eval(JOSM_search("user:HungryHorse"))][setting("user_HungryHorse")]::postupload,
+way[eval(JOSM_search("user:PoconoMountains"))][setting("user_PoconoMountains")]::postupload,
+way[eval(JOSM_search("user:UpperAngaraRiver"))][setting("user_UpperAngaraRiver")]::postupload,
+way[eval(JOSM_search("user:WadiElRayanLake"))][setting("user_WadiElRayanLake")]::postupload,
+way[eval(JOSM_search("user:ThunShipCanal"))][setting("user_ThunShipCanal")]::postupload,
+way[eval(JOSM_search("user:DanjiangkouDam"))][setting("user_DanjiangkouDam")]::postupload,
+way[eval(JOSM_search("user:CubangoRiver"))][setting("user_CubangoRiver")]::postupload,
+way[eval(JOSM_search("user:MountFairweather"))][setting("user_MountFairweather")]::postupload,
+way[eval(JOSM_search("user:RezovskiCreek"))][setting("user_RezovskiCreek")]::postupload,
+way[eval(JOSM_search("user:AssiniboineRiver"))][setting("user_AssiniboineRiver")]::postupload,
+way[eval(JOSM_search("user:BayofZekreet"))][setting("user_BayofZekreet")]::postupload,
+way[eval(JOSM_search("user:CanalesReservoir"))][setting("user_CanalesReservoir")]::postupload,
+way[eval(JOSM_search("user:LakeQuilotoa"))][setting("user_LakeQuilotoa")]::postupload,
+way[eval(JOSM_search("user:Pikespeak"))][setting("user_Pikespeak")]::postupload,
+way[eval(JOSM_search("user:MountNarodnaya"))][setting("user_MountNarodnaya")]::postupload,
+way[eval(JOSM_search("user:FortRandallDam"))][setting("user_FortRandallDam")]::postupload,
+way[eval(JOSM_search("user:YosemiteValley"))][setting("user_YosemiteValley")]::postupload,
+way[eval(JOSM_search("user:JebelJais"))][setting("user_JebelJais")]::postupload,
+way[eval(JOSM_search("user:Nolichucky"))][setting("user_Nolichucky")]::postupload,
+way[eval(JOSM_search("user:LoganPass"))][setting("user_LoganPass")]::postupload,
+way[eval(JOSM_search("user:LanusOeste"))][setting("user_LanusOeste")]::postupload,
+way[eval(JOSM_search("user:Hallstatt"))][setting("user_Hallstatt")]::postupload,
+way[eval(JOSM_search("user:MountTeide"))][setting("user_MountTeide")]::postupload,
+way[eval(JOSM_search("user:TrusoValley"))][setting("user_TrusoValley")]::postupload,
+way[eval(JOSM_search("user:IsleofSkye9"))][setting("user_IsleofSkye9")]::postupload,
+way[eval(JOSM_search("user:GuyandotteRiver"))][setting("user_GuyandotteRiver")]::postupload,
+way[eval(JOSM_search("user:LechuguillaDesert"))][setting("user_LechuguillaDesert")]::postupload,
+way[eval(JOSM_search("user:MercedarioMountain"))][setting("user_MercedarioMountain")]::postupload,
+way[eval(JOSM_search("user:ChichesterCanal"))][setting("user_ChichesterCanal")]::postupload,
+way[eval(JOSM_search("user:Drammenselva"))][setting("user_Drammenselva")]::postupload,
+way[eval(JOSM_search("user:Haweswater"))][setting("user_Haweswater")]::postupload,
+way[eval(JOSM_search("user:RussellLake"))][setting("user_RussellLake")]::postupload,
+way[eval(JOSM_search("user:IshikariPlain"))][setting("user_IshikariPlain")]::postupload,
+way[eval(JOSM_search("user:HonisterPass"))][setting("user_HonisterPass")]::postupload,
+way[eval(JOSM_search("user:LakeTanganyika"))][setting("user_LakeTanganyika")]::postupload,
+way[eval(JOSM_search("user:Ometepe"))][setting("user_Ometepe")]::postupload,
+way[eval(JOSM_search("user:Makinisland"))][setting("user_Makinisland")]::postupload,
+way[eval(JOSM_search("user:IjRiver"))][setting("user_IjRiver")]::postupload,
+way[eval(JOSM_search("user:Omotesando"))][setting("user_Omotesando")]::postupload,
+way[eval(JOSM_search("user:WardijaRidge"))][setting("user_WardijaRidge")]::postupload,
+way[eval(JOSM_search("user:NevadaFall"))][setting("user_NevadaFall")]::postupload,
+way[eval(JOSM_search("user:RockefellerPlateau"))][setting("user_RockefellerPlateau")]::postupload,
+way[eval(JOSM_search("user:SutroTower"))][setting("user_SutroTower")]::postupload,
+way[eval(JOSM_search("user:RangipoDesert"))][setting("user_RangipoDesert")]::postupload,
+way[eval(JOSM_search("user:SmokeCreekDesert"))][setting("user_SmokeCreekDesert")]::postupload,
+way[eval(JOSM_search("user:ZugIsland"))][setting("user_ZugIsland")]::postupload,
+way[eval(JOSM_search("user:MountDzhimara"))][setting("user_MountDzhimara")]::postupload,
+way[eval(JOSM_search("user:Torderariver"))][setting("user_Torderariver")]::postupload,
+way[eval(JOSM_search("user:MountNyiragongo"))][setting("user_MountNyiragongo")]::postupload,
+way[eval(JOSM_search("user:RiverCasiquiare"))][setting("user_RiverCasiquiare")]::postupload,
+way[eval(JOSM_search("user:DanakilDesert"))][setting("user_DanakilDesert")]::postupload,
+way[eval(JOSM_search("user:KulundaSteppe"))][setting("user_KulundaSteppe")]::postupload,
+way[eval(JOSM_search("user:sportyAT"))][setting("user_sportyAT")]::postupload,
+way[eval(JOSM_search("user:Jordaan23"))][setting("user_Jordaan23")]::postupload,
+way[eval(JOSM_search("user:Kuskokwim"))][setting("user_Kuskokwim")]::postupload,
+way[eval(JOSM_search("user:eg_ggts"))][setting("user_eg_ggts")]::postupload,
+way[eval(JOSM_search("user:PiedmontPark"))][setting("user_PiedmontPark")]::postupload,
+way[eval(JOSM_search("user:Trastevere"))][setting("user_Trastevere")]::postupload,
+way[eval(JOSM_search("user:ObRiver"))][setting("user_ObRiver")]::postupload,
+way[eval(JOSM_search("user:Chesapeake"))][setting("user_Chesapeake")]::postupload,
+way[eval(JOSM_search("user:CranaeIsland"))][setting("user_CranaeIsland")]::postupload,
+way[eval(JOSM_search("user:Masherbrum"))][setting("user_Masherbrum")]::postupload,
+way[eval(JOSM_search("user:Jungfrau9"))][setting("user_Jungfrau9")]::postupload,
+way[eval(JOSM_search("user:Wynwood"))][setting("user_Wynwood")]::postupload,
+way[eval(JOSM_search("user:DaleOfAire"))][setting("user_DaleOfAire")]::postupload,
+way[eval(JOSM_search("user:SozhRiver"))][setting("user_SozhRiver")]::postupload,
+way[eval(JOSM_search("user:ShawIsland"))][setting("user_ShawIsland")]::postupload,
+way[eval(JOSM_search("user:Plekhanov"))][setting("user_Plekhanov")]::postupload,
+way[eval(JOSM_search("user:NanMadol"))][setting("user_NanMadol")]::postupload,
+way[eval(JOSM_search("user:Wudang"))][setting("user_Wudang")]::postupload,
+way[eval(JOSM_search("user:bolalala"))][setting("user_bolalala")]::postupload,
+way[eval(JOSM_search("user:Tusculum"))][setting("user_Tusculum")]::postupload,
+way[eval(JOSM_search("user:Takadanobaba"))][setting("user_Takadanobaba")]::postupload,
+way[eval(JOSM_search("user:D Sravan"))][setting("user_D Sravan")]::postupload,
+way[eval(JOSM_search("user:ChapmansPeak"))][setting("user_ChapmansPeak")]::postupload,
+way[eval(JOSM_search("user:DelawareWaterGap"))][setting("user_DelawareWaterGap")]::postupload,
+way[eval(JOSM_search("user:Belaya01"))][setting("user_Belaya01")]::postupload,
+way[eval(JOSM_search("user:Jaggededge"))][setting("user_Jaggededge")]::postupload,
+way[eval(JOSM_search("user:LomasDelGuijarro"))][setting("user_LomasDelGuijarro")]::postupload,
+way[eval(JOSM_search("user:SBJC"))][setting("user_SBJC")]::postupload,
+way[eval(JOSM_search("user:WesternGhats"))][setting("user_WesternGhats")]::postupload,
+way[eval(JOSM_search("user:Josefstadt"))][setting("user_Josefstadt")]::postupload,
+way[eval(JOSM_search("user:LakeComo"))][setting("user_LakeComo")]::postupload,
+way[eval(JOSM_search("user:varP87"))][setting("user_varP87")]::postupload,
+way[eval(JOSM_search("user:Kitty_Mars"))][setting("user_Kitty_Mars")]::postupload,
+
+/* For All Users setting */
+
+way[eval(JOSM_search("user:Alderney or user:UluruRock or user:ErzsebetTer or user:Pantanal5 or user:PointeDesAlmadies or user:Escambron or user:Cloudbreak or user:Nanticoke or user:Okavango77 or user:KazakhSteppe or user:roanoke_island or user:BonanzaPeak or user:Antiparos or user:Skiddaw or user:Fernandina1 or user:Artibonite or user:LacDeYate or user:HawRiver or user:BeagleChannel or user:GangnamDistrict or user:CowlesBog or user:ForbiddenCity or user:MavericksBB or user:Samaipata or user:Nullarbor or user:Begamon or user:PlazaBaquedano or user:pinky_16 or user:KwaMakhutha or user:Coolbaugh or user:vanern or user:ZocaloBlanco or user:ApostleIslands or user:SpanishPeaks or user:photogswa or user:MountStanley or user:RossSea or user:Scioto or user:EgholmIsland or user:PiazzaDellaSignoria or user:Fjallsjoalven or user:tony_hny or user:Olotele or user:Kanchenjunga or user:DoloresPark or user:Tchoupitoulas or user:Antelopecliif or user:g3reader or user:moviebuffAS or user:Hoyt_Schermerhorn or user:VesterbrogadeStreet or user:LosseRiver or user:SeguraRiver or user:QinghaiLake or user:TuggeranongHill or user:WellenkuppeCliff or user:ScheldtRiver or user:MountKitchener or user:TaklamakanDesert or user:LaurentianPlateau or user:HoutribdijkDam or user:SarygamyshLake or user:PechoraPlain or user:ChihuahuanDesert or user:ChychykliaRiver or user:MarcyAve or user:IshRiver or user:Rimac22 or user:TebulosmtaMountain or user:JiangjunMNT or user:GrootLetabaRiver or user:ValleSpluga or user:OuanoukrimMNT or user:LuangwaRiver or user:FinowRiver or user:CapitolHill or user:RudenIsland or user:OronoBog or user:JiuzhaigouValley or user:BirminghamPlateau or user:ThirlmereReservoir or user:JinshaRiver or user:MountWrangell or user:UncompahgrePlateau or user:KyzylkumDesert or user:MountSneffels or user:SalisburyPlain or user:MinjiangRiver or user:ManzalaLake or user:CalleNorZaragay or user:GamkaskloofValley or user:PilcomayoRiver or user:PicoDoFogo or user:LizardHeadPeak or user:OlipaIsland or user:MakomanaiRiver or user:PontaDoOuro or user:Alcatraz05 or user:JerrawangalaValley or user:PoolMalebo or user:WinnipegosisLake or user:GribskovForest or user:KunduzRiver or user:Grasmere or user:LittleScarciesRiver or user:ChingfordReservoir or user:MontHiuchigatake or user:LakeKutcharo or user:StrzeleckiDesert or user:Ahaggarplateau or user:WadiWishkaDam or user:BecharofLake or user:KuskokwimRiver or user:LaMosquitia or user:SingCountry or user:gymsNmaps or user:sky_hi or user:lucky_33 or user:Tyrifjorden or user:GilpinFalls or user:TeaHorseRoad or user:TeltowCanal or user:simonmoon or user:DolomiteMountainRange or user:FourPeaksMNT or user:BransfieldBasin or user:VardziaRuins or user:Sugarloaf or user:CoursSaleya or user:LoessPlateau or user:GreatArtesianBasin or user:Yoyogipark or user:HunterdonPlateau or user:BelleIsle or user:HindmarshSquare or user:MountGozaisho or user:SkelligIslands or user:HungryHorse or user:PoconoMountains or user:UpperAngaraRiver or user:WadiElRayanLake or user:ThunShipCanal or user:DanjiangkouDam or user:CubangoRiver or user:MountFairweather or user:RezovskiCreek or user:AssiniboineRiver or user:BayofZekreet or user:CanalesReservoir or user:LakeQuilotoa or user:Pikespeak or user:MountNarodnaya or user:FortRandallDam or user:YosemiteValley or user:JebelJais or user:Nolichucky or user:LoganPass or user:LanusOeste or user:Hallstatt or user:MountTeide or user:TrusoValley or user:IsleofSkye9 or user:GuyandotteRiver or user:LechuguillaDesert or user:MercedarioMountain or user:ChichesterCanal or user:Drammenselva or user:Haweswater or user:RussellLake or user:IshikariPlain or user:HonisterPass or user:LakeTanganyika or user:Ometepe or user:Makinisland or user:IjRiver or user:Omotesando or user:WardijaRidge or user:NevadaFall or user:RockefellerPlateau or user:SutroTower or user:RangipoDesert or user:SmokeCreekDesert or user:ZugIsland or user:MountDzhimara or user:Torderariver or user:MountNyiragongo or user:RiverCasiquiare or user:DanakilDesert or user:KulundaSteppe or user:sportyAT or user:Jordaan23 or user:Kuskokwim or user:eg_ggts or user:PiedmontPark or user:Trastevere or user:ObRiver or user:Chesapeake or user:CranaeIsland or user:Masherbrum or user:Jungfrau9 or user:Wynwood or user:DaleOfAire or user:SozhRiver or user:ShawIsland or user:Plekhanov or user:NanMadol or user:Wudang or user:bolalala or user:Tusculum or user:Takadanobaba or user:D Sravan or user:ChapmansPeak or user:DelawareWaterGap or user:Belaya01 or user:Jaggededge or user:LomasDelGuijarro or user:SBJC or user:WesternGhats or user:Josefstadt or user:LakeComo or user:varP87 or user:Kitty_Mars"))][setting("user_all")]::postupload
+{
+  z-index: -12;
+  casing-width: 8;
+  casing-color: #c61aff; /* orginial purple */
+  casing-opacity: 0.5;
+}
+
+/* Styling of ways that are part of modified relations once they belong to "history" */
+
+/* For individual user settings */
+
+relation[eval(JOSM_search("user:Alderney"))] > way[setting("user_Alderney")]::postupload_relations,
+relation[eval(JOSM_search("user:UluruRock"))] > way[setting("user_UluruRock")]::postupload_relations,
+relation[eval(JOSM_search("user:ErzsebetTer"))] > way[setting("user_ErzsebetTer")]::postupload_relations,
+relation[eval(JOSM_search("user:Pantanal5"))] > way[setting("user_Pantanal5")]::postupload_relations,
+relation[eval(JOSM_search("user:PointeDesAlmadies"))] > way[setting("user_PointeDesAlmadies")]::postupload_relations,
+relation[eval(JOSM_search("user:Escambron"))] > way[setting("user_Escambron")]::postupload_relations,
+relation[eval(JOSM_search("user:Cloudbreak"))] > way[setting("user_Cloudbreak")]::postupload_relations,
+relation[eval(JOSM_search("user:Nanticoke"))] > way[setting("user_Nanticoke")]::postupload_relations,
+relation[eval(JOSM_search("user:Okavango77"))] > way[setting("user_Okavango77")]::postupload_relations,
+relation[eval(JOSM_search("user:KazakhSteppe"))] > way[setting("user_KazakhSteppe")]::postupload_relations,
+relation[eval(JOSM_search("user:roanoke_island"))] > way[setting("user_roanoke_island")]::postupload_relations,
+relation[eval(JOSM_search("user:BonanzaPeak"))] > way[setting("user_BonanzaPeak")]::postupload_relations,
+relation[eval(JOSM_search("user:Antiparos"))] > way[setting("user_Antiparos")]::postupload_relations,
+relation[eval(JOSM_search("user:Skiddaw"))] > way[setting("user_Skiddaw")]::postupload_relations,
+relation[eval(JOSM_search("user:Fernandina1"))] > way[setting("user_Fernandina1")]::postupload_relations,
+relation[eval(JOSM_search("user:Artibonite"))] > way[setting("user_Artibonite")]::postupload_relations,
+relation[eval(JOSM_search("user:LacDeYate"))] > way[setting("user_LacDeYate")]::postupload_relations,
+relation[eval(JOSM_search("user:HawRiver"))] > way[setting("user_HawRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:BeagleChannel"))] > way[setting("user_BeagleChannel")]::postupload_relations,
+relation[eval(JOSM_search("user:GangnamDistrict"))] > way[setting("user_GangnamDistrict")]::postupload_relations,
+relation[eval(JOSM_search("user:CowlesBog"))] > way[setting("user_CowlesBog")]::postupload_relations,
+relation[eval(JOSM_search("user:ForbiddenCity"))] > way[setting("user_ForbiddenCity")]::postupload_relations,
+relation[eval(JOSM_search("user:MavericksBB"))] > way[setting("user_MavericksBB")]::postupload_relations,
+relation[eval(JOSM_search("user:Samaipata"))] > way[setting("user_Samaipata")]::postupload_relations,
+relation[eval(JOSM_search("user:Nullarbor"))] > way[setting("user_Nullarbor")]::postupload_relations,
+relation[eval(JOSM_search("user:Begamon"))] > way[setting("user_Begamon")]::postupload_relations,
+relation[eval(JOSM_search("user:PlazaBaquedano"))] > way[setting("user_PlazaBaquedano")]::postupload_relations,
+relation[eval(JOSM_search("user:pinky_16"))] > way[setting("user_pinky_16")]::postupload_relations,
+relation[eval(JOSM_search("user:KwaMakhutha"))] > way[setting("user_KwaMakhutha")]::postupload_relations,
+relation[eval(JOSM_search("user:Coolbaugh"))] > way[setting("user_Coolbaugh")]::postupload_relations,
+relation[eval(JOSM_search("user:vanern"))] > way[setting("user_vanern")]::postupload_relations,
+relation[eval(JOSM_search("user:ZocaloBlanco"))] > way[setting("user_ZocaloBlanco")]::postupload_relations,
+relation[eval(JOSM_search("user:ApostleIslands"))] > way[setting("user_ApostleIslands")]::postupload_relations,
+relation[eval(JOSM_search("user:SpanishPeaks"))] > way[setting("user_SpanishPeaks")]::postupload_relations,
+relation[eval(JOSM_search("user:photogswa"))] > way[setting("user_photogswa")]::postupload_relations,
+relation[eval(JOSM_search("user:MountStanley"))] > way[setting("user_MountStanley")]::postupload_relations,
+relation[eval(JOSM_search("user:RossSea"))] > way[setting("user_RossSea")]::postupload_relations,
+relation[eval(JOSM_search("user:Scioto"))] > way[setting("user_Scioto")]::postupload_relations,
+relation[eval(JOSM_search("user:EgholmIsland"))] > way[setting("user_EgholmIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:PiazzaDellaSignoria"))] > way[setting("user_PiazzaDellaSignoria")]::postupload_relations,
+relation[eval(JOSM_search("user:Fjallsjoalven"))] > way[setting("user_Fjallsjoalven")]::postupload_relations,
+relation[eval(JOSM_search("user:tony_hny"))] > way[setting("user_tony_hny")]::postupload_relations,
+relation[eval(JOSM_search("user:Olotele"))] > way[setting("user_Olotele")]::postupload_relations,
+relation[eval(JOSM_search("user:Kanchenjunga"))] > way[setting("user_Kanchenjunga")]::postupload_relations,
+relation[eval(JOSM_search("user:DoloresPark"))] > way[setting("user_DoloresPark")]::postupload_relations,
+relation[eval(JOSM_search("user:Tchoupitoulas"))] > way[setting("user_Tchoupitoulas")]::postupload_relations,
+relation[eval(JOSM_search("user:Antelopecliif"))] > way[setting("user_Antelopecliif")]::postupload_relations,
+relation[eval(JOSM_search("user:g3reader"))] > way[setting("user_g3reader")]::postupload_relations,
+relation[eval(JOSM_search("user:moviebuffAS"))] > way[setting("user_moviebuffAS")]::postupload_relations,
+relation[eval(JOSM_search("user:Hoyt_Schermerhorn"))] > way[setting("user_Hoyt_Schermerhorn")]::postupload_relations,
+relation[eval(JOSM_search("user:VesterbrogadeStreet"))] > way[setting("user_VesterbrogadeStreet")]::postupload_relations,
+relation[eval(JOSM_search("user:LosseRiver"))] > way[setting("user_LosseRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:SeguraRiver"))] > way[setting("user_SeguraRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:QinghaiLake"))] > way[setting("user_QinghaiLake")]::postupload_relations,
+relation[eval(JOSM_search("user:TuggeranongHill"))] > way[setting("user_TuggeranongHill")]::postupload_relations,
+relation[eval(JOSM_search("user:WellenkuppeCliff"))] > way[setting("user_WellenkuppeCliff")]::postupload_relations,
+relation[eval(JOSM_search("user:ScheldtRiver"))] > way[setting("user_ScheldtRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountKitchener"))] > way[setting("user_MountKitchener")]::postupload_relations,
+relation[eval(JOSM_search("user:TaklamakanDesert"))] > way[setting("user_TaklamakanDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:LaurentianPlateau"))] > way[setting("user_LaurentianPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:HoutribdijkDam"))] > way[setting("user_HoutribdijkDam")]::postupload_relations,
+relation[eval(JOSM_search("user:SarygamyshLake"))] > way[setting("user_SarygamyshLake")]::postupload_relations,
+relation[eval(JOSM_search("user:PechoraPlain"))] > way[setting("user_PechoraPlain")]::postupload_relations,
+relation[eval(JOSM_search("user:ChihuahuanDesert"))] > way[setting("user_ChihuahuanDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:ChychykliaRiver"))] > way[setting("user_ChychykliaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MarcyAve"))] > way[setting("user_MarcyAve")]::postupload_relations,
+relation[eval(JOSM_search("user:IshRiver"))] > way[setting("user_IshRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Rimac22"))] > way[setting("user_Rimac22")]::postupload_relations,
+relation[eval(JOSM_search("user:TebulosmtaMountain"))] > way[setting("user_TebulosmtaMountain")]::postupload_relations,
+relation[eval(JOSM_search("user:JiangjunMNT"))] > way[setting("user_JiangjunMNT")]::postupload_relations,
+relation[eval(JOSM_search("user:GrootLetabaRiver"))] > way[setting("user_GrootLetabaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ValleSpluga"))] > way[setting("user_ValleSpluga")]::postupload_relations,
+relation[eval(JOSM_search("user:OuanoukrimMNT"))] > way[setting("user_OuanoukrimMNT")]::postupload_relations,
+relation[eval(JOSM_search("user:LuangwaRiver"))] > way[setting("user_LuangwaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:FinowRiver"))] > way[setting("user_FinowRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:CapitolHill"))] > way[setting("user_CapitolHill")]::postupload_relations,
+relation[eval(JOSM_search("user:RudenIsland"))] > way[setting("user_RudenIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:OronoBog"))] > way[setting("user_OronoBog")]::postupload_relations,
+relation[eval(JOSM_search("user:JiuzhaigouValley"))] > way[setting("user_JiuzhaigouValley")]::postupload_relations,
+relation[eval(JOSM_search("user:BirminghamPlateau"))] > way[setting("user_BirminghamPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:ThirlmereReservoir"))] > way[setting("user_ThirlmereReservoir")]::postupload_relations,
+relation[eval(JOSM_search("user:JinshaRiver"))] > way[setting("user_JinshaRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountWrangell"))] > way[setting("user_MountWrangell")]::postupload_relations,
+relation[eval(JOSM_search("user:UncompahgrePlateau"))] > way[setting("user_UncompahgrePlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:KyzylkumDesert"))] > way[setting("user_KyzylkumDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:MountSneffels"))] > way[setting("user_MountSneffels")]::postupload_relations,
+relation[eval(JOSM_search("user:SalisburyPlain"))] > way[setting("user_SalisburyPlain")]::postupload_relations,
+relation[eval(JOSM_search("user:MinjiangRiver"))] > way[setting("user_MinjiangRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ManzalaLake"))] > way[setting("user_ManzalaLake")]::postupload_relations,
+relation[eval(JOSM_search("user:CalleNorZaragay"))] > way[setting("user_CalleNorZaragay")]::postupload_relations,
+relation[eval(JOSM_search("user:GamkaskloofValley"))] > way[setting("user_GamkaskloofValley")]::postupload_relations,
+relation[eval(JOSM_search("user:PilcomayoRiver"))] > way[setting("user_PilcomayoRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:PicoDoFogo"))] > way[setting("user_PicoDoFogo")]::postupload_relations,
+relation[eval(JOSM_search("user:LizardHeadPeak"))] > way[setting("user_LizardHeadPeak")]::postupload_relations,
+relation[eval(JOSM_search("user:OlipaIsland"))] > way[setting("user_OlipaIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:MakomanaiRiver"))] > way[setting("user_MakomanaiRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:PontaDoOuro"))] > way[setting("user_PontaDoOuro")]::postupload_relations,
+relation[eval(JOSM_search("user:Alcatraz05"))] > way[setting("user_Alcatraz05")]::postupload_relations,
+relation[eval(JOSM_search("user:JerrawangalaValley"))] > way[setting("user_JerrawangalaValley")]::postupload_relations,
+relation[eval(JOSM_search("user:PoolMalebo"))] > way[setting("user_PoolMalebo")]::postupload_relations,
+relation[eval(JOSM_search("user:WinnipegosisLake"))] > way[setting("user_WinnipegosisLake")]::postupload_relations,
+relation[eval(JOSM_search("user:GribskovForest"))] > way[setting("user_GribskovForest")]::postupload_relations,
+relation[eval(JOSM_search("user:KunduzRiver"))] > way[setting("user_KunduzRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Grasmere"))] > way[setting("user_Grasmere")]::postupload_relations,
+relation[eval(JOSM_search("user:LittleScarciesRiver"))] > way[setting("user_LittleScarciesRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ChingfordReservoir"))] > way[setting("user_ChingfordReservoir")]::postupload_relations,
+relation[eval(JOSM_search("user:MontHiuchigatake"))] > way[setting("user_MontHiuchigatake")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeKutcharo"))] > way[setting("user_LakeKutcharo")]::postupload_relations,
+relation[eval(JOSM_search("user:StrzeleckiDesert"))] > way[setting("user_StrzeleckiDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:Ahaggarplateau"))] > way[setting("user_Ahaggarplateau")]::postupload_relations,
+relation[eval(JOSM_search("user:WadiWishkaDam"))] > way[setting("user_WadiWishkaDam")]::postupload_relations,
+relation[eval(JOSM_search("user:BecharofLake"))] > way[setting("user_BecharofLake")]::postupload_relations,
+relation[eval(JOSM_search("user:KuskokwimRiver"))] > way[setting("user_KuskokwimRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:LaMosquitia"))] > way[setting("user_LaMosquitia")]::postupload_relations,
+relation[eval(JOSM_search("user:SingCountry"))] > way[setting("user_SingCountry")]::postupload_relations,
+relation[eval(JOSM_search("user:gymsNmaps"))] > way[setting("user_gymsNmaps")]::postupload_relations,
+relation[eval(JOSM_search("user:sky_hi"))] > way[setting("user_sky_hi")]::postupload_relations,
+relation[eval(JOSM_search("user:lucky_33"))] > way[setting("user_lucky_33")]::postupload_relations,
+relation[eval(JOSM_search("user:Tyrifjorden"))] > way[setting("user_Tyrifjorden")]::postupload_relations,
+relation[eval(JOSM_search("user:GilpinFalls"))] > way[setting("user_GilpinFalls")]::postupload_relations,
+relation[eval(JOSM_search("user:TeaHorseRoad"))] > way[setting("user_TeaHorseRoad")]::postupload_relations,
+relation[eval(JOSM_search("user:TeltowCanal"))] > way[setting("user_TeltowCanal")]::postupload_relations,
+relation[eval(JOSM_search("user:simonmoon"))] > way[setting("user_simonmoon")]::postupload_relations,
+relation[eval(JOSM_search("user:DolomiteMountainRange"))] > way[setting("user_DolomiteMountainRange")]::postupload_relations,
+relation[eval(JOSM_search("user:FourPeaksMNT"))] > way[setting("user_FourPeaksMNT")]::postupload_relations,
+relation[eval(JOSM_search("user:BransfieldBasin"))] > way[setting("user_BransfieldBasin")]::postupload_relations,
+relation[eval(JOSM_search("user:VardziaRuins"))] > way[setting("user_VardziaRuins")]::postupload_relations,
+relation[eval(JOSM_search("user:Sugarloaf"))] > way[setting("user_Sugarloaf")]::postupload_relations,
+relation[eval(JOSM_search("user:CoursSaleya"))] > way[setting("user_CoursSaleya")]::postupload_relations,
+relation[eval(JOSM_search("user:LoessPlateau"))] > way[setting("user_LoessPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:GreatArtesianBasin"))] > way[setting("user_GreatArtesianBasin")]::postupload_relations,
+relation[eval(JOSM_search("user:Yoyogipark"))] > way[setting("user_Yoyogipark")]::postupload_relations,
+relation[eval(JOSM_search("user:HunterdonPlateau"))] > way[setting("user_HunterdonPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:BelleIsle"))] > way[setting("user_BelleIsle")]::postupload_relations,
+relation[eval(JOSM_search("user:HindmarshSquare"))] > way[setting("user_HindmarshSquare")]::postupload_relations,
+relation[eval(JOSM_search("user:MountGozaisho"))] > way[setting("user_MountGozaisho")]::postupload_relations,
+relation[eval(JOSM_search("user:SkelligIslands"))] > way[setting("user_SkelligIslands")]::postupload_relations,
+relation[eval(JOSM_search("user:HungryHorse"))] > way[setting("user_HungryHorse")]::postupload_relations,
+relation[eval(JOSM_search("user:PoconoMountains"))] > way[setting("user_PoconoMountains")]::postupload_relations,
+relation[eval(JOSM_search("user:UpperAngaraRiver"))] > way[setting("user_UpperAngaraRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:WadiElRayanLake"))] > way[setting("user_WadiElRayanLake")]::postupload_relations,
+relation[eval(JOSM_search("user:ThunShipCanal"))] > way[setting("user_ThunShipCanal")]::postupload_relations,
+relation[eval(JOSM_search("user:DanjiangkouDam"))] > way[setting("user_DanjiangkouDam")]::postupload_relations,
+relation[eval(JOSM_search("user:CubangoRiver"))] > way[setting("user_CubangoRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountFairweather"))] > way[setting("user_MountFairweather")]::postupload_relations,
+relation[eval(JOSM_search("user:RezovskiCreek"))] > way[setting("user_RezovskiCreek")]::postupload_relations,
+relation[eval(JOSM_search("user:AssiniboineRiver"))] > way[setting("user_AssiniboineRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:BayofZekreet"))] > way[setting("user_BayofZekreet")]::postupload_relations,
+relation[eval(JOSM_search("user:CanalesReservoir"))] > way[setting("user_CanalesReservoir")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeQuilotoa"))] > way[setting("user_LakeQuilotoa")]::postupload_relations,
+relation[eval(JOSM_search("user:Pikespeak"))] > way[setting("user_Pikespeak")]::postupload_relations,
+relation[eval(JOSM_search("user:MountNarodnaya"))] > way[setting("user_MountNarodnaya")]::postupload_relations,
+relation[eval(JOSM_search("user:FortRandallDam"))] > way[setting("user_FortRandallDam")]::postupload_relations,
+relation[eval(JOSM_search("user:YosemiteValley"))] > way[setting("user_YosemiteValley")]::postupload_relations,
+relation[eval(JOSM_search("user:JebelJais"))] > way[setting("user_JebelJais")]::postupload_relations,
+relation[eval(JOSM_search("user:Nolichucky"))] > way[setting("user_Nolichucky")]::postupload_relations,
+relation[eval(JOSM_search("user:LoganPass"))] > way[setting("user_LoganPass")]::postupload_relations,
+relation[eval(JOSM_search("user:LanusOeste"))] > way[setting("user_LanusOeste")]::postupload_relations,
+relation[eval(JOSM_search("user:Hallstatt"))] > way[setting("user_Hallstatt")]::postupload_relations,
+relation[eval(JOSM_search("user:MountTeide"))] > way[setting("user_MountTeide")]::postupload_relations,
+relation[eval(JOSM_search("user:TrusoValley"))] > way[setting("user_TrusoValley")]::postupload_relations,
+relation[eval(JOSM_search("user:IsleofSkye9"))] > way[setting("user_IsleofSkye9")]::postupload_relations,
+relation[eval(JOSM_search("user:GuyandotteRiver"))] > way[setting("user_GuyandotteRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:LechuguillaDesert"))] > way[setting("user_LechuguillaDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:MercedarioMountain"))] > way[setting("user_MercedarioMountain")]::postupload_relations,
+relation[eval(JOSM_search("user:ChichesterCanal"))] > way[setting("user_ChichesterCanal")]::postupload_relations,
+relation[eval(JOSM_search("user:Drammenselva"))] > way[setting("user_Drammenselva")]::postupload_relations,
+relation[eval(JOSM_search("user:Haweswater"))] > way[setting("user_Haweswater")]::postupload_relations,
+relation[eval(JOSM_search("user:RussellLake"))] > way[setting("user_RussellLake")]::postupload_relations,
+relation[eval(JOSM_search("user:IshikariPlain"))] > way[setting("user_IshikariPlain")]::postupload_relations,
+relation[eval(JOSM_search("user:HonisterPass"))] > way[setting("user_HonisterPass")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeTanganyika"))] > way[setting("user_LakeTanganyika")]::postupload_relations,
+relation[eval(JOSM_search("user:Ometepe"))] > way[setting("user_Ometepe")]::postupload_relations,
+relation[eval(JOSM_search("user:Makinisland"))] > way[setting("user_Makinisland")]::postupload_relations,
+relation[eval(JOSM_search("user:IjRiver"))] > way[setting("user_IjRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Omotesando"))] > way[setting("user_Omotesando")]::postupload_relations,
+relation[eval(JOSM_search("user:WardijaRidge"))] > way[setting("user_WardijaRidge")]::postupload_relations,
+relation[eval(JOSM_search("user:NevadaFall"))] > way[setting("user_NevadaFall")]::postupload_relations,
+relation[eval(JOSM_search("user:RockefellerPlateau"))] > way[setting("user_RockefellerPlateau")]::postupload_relations,
+relation[eval(JOSM_search("user:SutroTower"))] > way[setting("user_SutroTower")]::postupload_relations,
+relation[eval(JOSM_search("user:RangipoDesert"))] > way[setting("user_RangipoDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:SmokeCreekDesert"))] > way[setting("user_SmokeCreekDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:ZugIsland"))] > way[setting("user_ZugIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:MountDzhimara"))] > way[setting("user_MountDzhimara")]::postupload_relations,
+relation[eval(JOSM_search("user:Torderariver"))] > way[setting("user_Torderariver")]::postupload_relations,
+relation[eval(JOSM_search("user:MountNyiragongo"))] > way[setting("user_MountNyiragongo")]::postupload_relations,
+relation[eval(JOSM_search("user:RiverCasiquiare"))] > way[setting("user_RiverCasiquiare")]::postupload_relations,
+relation[eval(JOSM_search("user:DanakilDesert"))] > way[setting("user_DanakilDesert")]::postupload_relations,
+relation[eval(JOSM_search("user:KulundaSteppe"))] > way[setting("user_KulundaSteppe")]::postupload_relations,
+relation[eval(JOSM_search("user:sportyAT"))] > way[setting("user_sportyAT")]::postupload_relations,
+relation[eval(JOSM_search("user:Jordaan23"))] > way[setting("user_Jordaan23")]::postupload_relations,
+relation[eval(JOSM_search("user:Kuskokwim"))] > way[setting("user_Kuskokwim")]::postupload_relations,
+relation[eval(JOSM_search("user:eg_ggts"))] > way[setting("user_eg_ggts")]::postupload_relations,
+relation[eval(JOSM_search("user:PiedmontPark"))] > way[setting("user_PiedmontPark")]::postupload_relations,
+relation[eval(JOSM_search("user:Trastevere"))] > way[setting("user_Trastevere")]::postupload_relations,
+relation[eval(JOSM_search("user:ObRiver"))] > way[setting("user_ObRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:Chesapeake"))] > way[setting("user_Chesapeake")]::postupload_relations,
+relation[eval(JOSM_search("user:CranaeIsland"))] > way[setting("user_CranaeIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:Masherbrum"))] > way[setting("user_Masherbrum")]::postupload_relations,
+relation[eval(JOSM_search("user:Jungfrau9"))] > way[setting("user_Jungfrau9")]::postupload_relations,
+relation[eval(JOSM_search("user:Wynwood"))] > way[setting("user_Wynwood")]::postupload_relations,
+relation[eval(JOSM_search("user:DaleOfAire"))] > way[setting("user_DaleOfAire")]::postupload_relations,
+relation[eval(JOSM_search("user:SozhRiver"))] > way[setting("user_SozhRiver")]::postupload_relations,
+relation[eval(JOSM_search("user:ShawIsland"))] > way[setting("user_ShawIsland")]::postupload_relations,
+relation[eval(JOSM_search("user:Plekhanov"))] > way[setting("user_Plekhanov")]::postupload_relations,
+relation[eval(JOSM_search("user:NanMadol"))] > way[setting("user_NanMadol")]::postupload_relations,
+relation[eval(JOSM_search("user:Wudang"))] > way[setting("user_Wudang")]::postupload_relations,
+relation[eval(JOSM_search("user:bolalala"))] > way[setting("user_bolalala")]::postupload_relations,
+relation[eval(JOSM_search("user:Tusculum"))] > way[setting("user_Tusculum")]::postupload_relations,
+relation[eval(JOSM_search("user:Takadanobaba"))] > way[setting("user_Takadanobaba")]::postupload_relations,
+relation[eval(JOSM_search("user:D Sravan"))] > way[setting("user_D Sravan")]::postupload_relations,
+relation[eval(JOSM_search("user:ChapmansPeak"))] > way[setting("user_ChapmansPeak")]::postupload_relations,
+relation[eval(JOSM_search("user:DelawareWaterGap"))] > way[setting("user_DelawareWaterGap")]::postupload_relations,
+relation[eval(JOSM_search("user:Belaya01"))] > way[setting("user_Belaya01")]::postupload_relations,
+relation[eval(JOSM_search("user:Jaggededge"))] > way[setting("user_Jaggededge")]::postupload_relations,
+relation[eval(JOSM_search("user:LomasDelGuijarro"))] > way[setting("user_LomasDelGuijarro")]::postupload_relations,
+relation[eval(JOSM_search("user:SBJC"))] > way[setting("user_SBJC")]::postupload_relations,
+relation[eval(JOSM_search("user:WesternGhats"))] > way[setting("user_WesternGhats")]::postupload_relations,
+relation[eval(JOSM_search("user:Josefstadt"))] > way[setting("user_Josefstadt")]::postupload_relations,
+relation[eval(JOSM_search("user:LakeComo"))] > way[setting("user_LakeComo")]::postupload_relations,
+relation[eval(JOSM_search("user:varP87"))] > way[setting("user_varP87")]::postupload_relations,
+relation[eval(JOSM_search("user:Kitty_Mars"))] > way[setting("user_Kitty_Mars")]::postupload_relations,
+
+/* For All Users setting */
+
+relation[eval(JOSM_search("user:Alderney or user:UluruRock or user:ErzsebetTer or user:Pantanal5 or user:PointeDesAlmadies or user:Escambron or user:Cloudbreak or user:Nanticoke or user:Okavango77 or user:KazakhSteppe or user:roanoke_island or user:BonanzaPeak or user:Antiparos or user:Skiddaw or user:Fernandina1 or user:Artibonite or user:LacDeYate or user:HawRiver or user:BeagleChannel or user:GangnamDistrict or user:CowlesBog or user:ForbiddenCity or user:MavericksBB or user:Samaipata or user:Nullarbor or user:Begamon or user:PlazaBaquedano or user:pinky_16 or user:KwaMakhutha or user:Coolbaugh or user:vanern or user:ZocaloBlanco or user:ApostleIslands or user:SpanishPeaks or user:photogswa or user:MountStanley or user:RossSea or user:Scioto or user:EgholmIsland or user:PiazzaDellaSignoria or user:Fjallsjoalven or user:tony_hny or user:Olotele or user:Kanchenjunga or user:DoloresPark or user:Tchoupitoulas or user:Antelopecliif or user:g3reader or user:moviebuffAS or user:Hoyt_Schermerhorn or user:VesterbrogadeStreet or user:LosseRiver or user:SeguraRiver or user:QinghaiLake or user:TuggeranongHill or user:WellenkuppeCliff or user:ScheldtRiver or user:MountKitchener or user:TaklamakanDesert or user:LaurentianPlateau or user:HoutribdijkDam or user:SarygamyshLake or user:PechoraPlain or user:ChihuahuanDesert or user:ChychykliaRiver or user:MarcyAve or user:IshRiver or user:Rimac22 or user:TebulosmtaMountain or user:JiangjunMNT or user:GrootLetabaRiver or user:ValleSpluga or user:OuanoukrimMNT or user:LuangwaRiver or user:FinowRiver or user:CapitolHill or user:RudenIsland or user:OronoBog or user:JiuzhaigouValley or user:BirminghamPlateau or user:ThirlmereReservoir or user:JinshaRiver or user:MountWrangell or user:UncompahgrePlateau or user:KyzylkumDesert or user:MountSneffels or user:SalisburyPlain or user:MinjiangRiver or user:ManzalaLake or user:CalleNorZaragay or user:GamkaskloofValley or user:PilcomayoRiver or user:PicoDoFogo or user:LizardHeadPeak or user:OlipaIsland or user:MakomanaiRiver or user:PontaDoOuro or user:Alcatraz05 or user:JerrawangalaValley or user:PoolMalebo or user:WinnipegosisLake or user:GribskovForest or user:KunduzRiver or user:Grasmere or user:LittleScarciesRiver or user:ChingfordReservoir or user:MontHiuchigatake or user:LakeKutcharo or user:StrzeleckiDesert or user:Ahaggarplateau or user:WadiWishkaDam or user:BecharofLake or user:KuskokwimRiver or user:LaMosquitia or user:SingCountry or user:gymsNmaps or user:sky_hi or user:lucky_33 or user:Tyrifjorden or user:GilpinFalls or user:TeaHorseRoad or user:TeltowCanal or user:simonmoon or user:DolomiteMountainRange or user:FourPeaksMNT or user:BransfieldBasin or user:VardziaRuins or user:Sugarloaf or user:CoursSaleya or user:LoessPlateau or user:GreatArtesianBasin or user:Yoyogipark or user:HunterdonPlateau or user:BelleIsle or user:HindmarshSquare or user:MountGozaisho or user:SkelligIslands or user:HungryHorse or user:PoconoMountains or user:UpperAngaraRiver or user:WadiElRayanLake or user:ThunShipCanal or user:DanjiangkouDam or user:CubangoRiver or user:MountFairweather or user:RezovskiCreek or user:AssiniboineRiver or user:BayofZekreet or user:CanalesReservoir or user:LakeQuilotoa or user:Pikespeak or user:MountNarodnaya or user:FortRandallDam or user:YosemiteValley or user:JebelJais or user:Nolichucky or user:LoganPass or user:LanusOeste or user:Hallstatt or user:MountTeide or user:TrusoValley or user:IsleofSkye9 or user:GuyandotteRiver or user:LechuguillaDesert or user:MercedarioMountain or user:ChichesterCanal or user:Drammenselva or user:Haweswater or user:RussellLake or user:IshikariPlain or user:HonisterPass or user:LakeTanganyika or user:Ometepe or user:Makinisland or user:IjRiver or user:Omotesando or user:WardijaRidge or user:NevadaFall or user:RockefellerPlateau or user:SutroTower or user:RangipoDesert or user:SmokeCreekDesert or user:ZugIsland or user:MountDzhimara or user:Torderariver or user:MountNyiragongo or user:RiverCasiquiare or user:DanakilDesert or user:KulundaSteppe or user:sportyAT or user:Jordaan23 or user:Kuskokwim or user:eg_ggts or user:PiedmontPark or user:Trastevere or user:ObRiver or user:Chesapeake or user:CranaeIsland or user:Masherbrum or user:Jungfrau9 or user:Wynwood or user:DaleOfAire or user:SozhRiver or user:ShawIsland or user:Plekhanov or user:NanMadol or user:Wudang or user:bolalala or user:Tusculum or user:Takadanobaba or user:D Sravan or user:ChapmansPeak or user:DelawareWaterGap or user:Belaya01 or user:Jaggededge or user:LomasDelGuijarro or user:SBJC or user:WesternGhats or user:Josefstadt or user:LakeComo or user:varP87 or user:Kitty_Mars"))] > way[setting("user_all")]::postupload_relations
+{
+  z-index: -10;
+  casing-width: 8;
+  casing-color: #33ccff; /* teal */
+  casing-opacity: 0.5;  
+}
